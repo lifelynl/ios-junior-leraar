@@ -13,6 +13,7 @@
 		A4E4BAD920357D39005212A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD820357D39005212A3 /* Assets.xcassets */; };
 		A4E4BADC20357D39005212A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BADA20357D39005212A3 /* LaunchScreen.storyboard */; };
 		A4E4BAE420359247005212A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAE320359247005212A3 /* GoogleService-Info.plist */; };
+		A4E4BAEA2035A527005212A3 /* ComptenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAE92035A527005212A3 /* ComptenceTableViewController.swift */; };
 		EA0242A3CF3C2BAE8A9C32AB /* Pods_JuniorLeraar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		A4E4BADB20357D39005212A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4E4BADD20357D39005212A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4E4BAE320359247005212A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4E4BAE92035A527005212A3 /* ComptenceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComptenceTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +82,32 @@
 		A4E4BAD020357D39005212A3 /* JuniorLeraar */ = {
 			isa = PBXGroup;
 			children = (
+				A4E4BAE62035A490005212A3 /* Controllers */,
+				A4E4BAE52035A47E005212A3 /* Storyboards */,
 				A4E4BAE320359247005212A3 /* GoogleService-Info.plist */,
 				A4E4BAD120357D39005212A3 /* AppDelegate.swift */,
-				A4E4BAD320357D39005212A3 /* ViewController.swift */,
-				A4E4BAD520357D39005212A3 /* Main.storyboard */,
 				A4E4BAD820357D39005212A3 /* Assets.xcassets */,
-				A4E4BADA20357D39005212A3 /* LaunchScreen.storyboard */,
 				A4E4BADD20357D39005212A3 /* Info.plist */,
 			);
 			path = JuniorLeraar;
+			sourceTree = "<group>";
+		};
+		A4E4BAE52035A47E005212A3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4BAD520357D39005212A3 /* Main.storyboard */,
+				A4E4BADA20357D39005212A3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A4E4BAE62035A490005212A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4BAD320357D39005212A3 /* ViewController.swift */,
+				A4E4BAE92035A527005212A3 /* ComptenceTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E4BAEA2035A527005212A3 /* ComptenceTableViewController.swift in Sources */,
 				A4E4BAD420357D39005212A3 /* ViewController.swift in Sources */,
 				A4E4BAD220357D39005212A3 /* AppDelegate.swift in Sources */,
 			);
