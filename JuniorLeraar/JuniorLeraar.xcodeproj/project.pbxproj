@@ -12,9 +12,14 @@
 		A4E4BAD720357D39005212A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD520357D39005212A3 /* Main.storyboard */; };
 		A4E4BAD920357D39005212A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD820357D39005212A3 /* Assets.xcassets */; };
 		A4E4BADC20357D39005212A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BADA20357D39005212A3 /* LaunchScreen.storyboard */; };
+		A4E4BAE420359247005212A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAE320359247005212A3 /* GoogleService-Info.plist */; };
+		EA0242A3CF3C2BAE8A9C32AB /* Pods_JuniorLeraar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37A28997FF7C4E36CD53EB50 /* Pods-JuniorLeraar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuniorLeraar.release.xcconfig"; path = "Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar.release.xcconfig"; sourceTree = "<group>"; };
+		44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuniorLeraar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		691B53134A140AB439C8AAAE /* Pods-JuniorLeraar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuniorLeraar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar.debug.xcconfig"; sourceTree = "<group>"; };
 		A4E4BACE20357D39005212A3 /* JuniorLeraar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuniorLeraar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4BAD120357D39005212A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4BAD320357D39005212A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		A4E4BAD820357D39005212A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E4BADB20357D39005212A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4E4BADD20357D39005212A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E4BAE320359247005212A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0242A3CF3C2BAE8A9C32AB /* Pods_JuniorLeraar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DF5724DC080926751B287CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				691B53134A140AB439C8AAAE /* Pods-JuniorLeraar.debug.xcconfig */,
+				37A28997FF7C4E36CD53EB50 /* Pods-JuniorLeraar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0B8EC3F8F2B9848897EE2F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4E4BAC520357D39005212A3 = {
 			isa = PBXGroup;
 			children = (
 				A4E4BAD020357D39005212A3 /* JuniorLeraar */,
 				A4E4BACF20357D39005212A3 /* Products */,
+				2DF5724DC080926751B287CC /* Pods */,
+				A0B8EC3F8F2B9848897EE2F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		A4E4BAD020357D39005212A3 /* JuniorLeraar */ = {
 			isa = PBXGroup;
 			children = (
+				A4E4BAE320359247005212A3 /* GoogleService-Info.plist */,
 				A4E4BAD120357D39005212A3 /* AppDelegate.swift */,
 				A4E4BAD320357D39005212A3 /* ViewController.swift */,
 				A4E4BAD520357D39005212A3 /* Main.storyboard */,
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4E4BAE020357D39005212A3 /* Build configuration list for PBXNativeTarget "JuniorLeraar" */;
 			buildPhases = (
+				1A4EEF83895719D739748B60 /* [CP] Check Pods Manifest.lock */,
 				A4E4BACA20357D39005212A3 /* Sources */,
 				A4E4BACB20357D39005212A3 /* Frameworks */,
 				A4E4BACC20357D39005212A3 /* Resources */,
+				DCE709AD4DB78E26C2D2F8BA /* [CP] Embed Pods Frameworks */,
+				EE5C5F3D4D7F2359E7647F31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E4BADC20357D39005212A3 /* LaunchScreen.storyboard in Resources */,
+				A4E4BAE420359247005212A3 /* GoogleService-Info.plist in Resources */,
 				A4E4BAD920357D39005212A3 /* Assets.xcassets in Resources */,
 				A4E4BAD720357D39005212A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A4EEF83895719D739748B60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JuniorLeraar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCE709AD4DB78E26C2D2F8BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE5C5F3D4D7F2359E7647F31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4E4BACA20357D39005212A3 /* Sources */ = {
@@ -272,6 +359,7 @@
 		};
 		A4E4BAE120357D39005212A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 691B53134A140AB439C8AAAE /* Pods-JuniorLeraar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -288,6 +376,7 @@
 		};
 		A4E4BAE220357D39005212A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37A28997FF7C4E36CD53EB50 /* Pods-JuniorLeraar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
