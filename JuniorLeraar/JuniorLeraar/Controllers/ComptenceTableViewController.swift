@@ -15,12 +15,14 @@ class ComptenceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        cellLabel.text = arraytje[1]
         tableView.reloadData()
         tableView.dataSource = self
-        
+        setupStyling()
     }
 
+    func setupStyling() {
+        navigationItem.title = "Didactisch Bekwaam"
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,4 +45,18 @@ class ComptenceTableViewController: UITableViewController {
         cell.textLabel?.text = arraytje[indexPath.row]
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        selectedProduct = filteredProductsArray[indexPath.row]
+        performSegue(withIdentifier: "openCompetenceCard", sender: self)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "openCompetenceCard" {
+//            // Setup new view controller
+//            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//            let destination = storyboard.instantiateViewController(withIdentifier: "custom")
+//            navigationController?.pushViewController(destination, animated: true)
+//        }
+//    }
 }

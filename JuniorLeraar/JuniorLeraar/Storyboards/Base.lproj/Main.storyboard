@@ -49,9 +49,6 @@
                                 <state key="normal" title="Collegiale Samenwerking">
                                     <color key="titleColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="EYk-1w-oQe" kind="show" id="90K-Hj-kc3"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjU-27-0Xp">
                                 <rect key="frame" x="0.0" y="597" width="375" height="70"/>
@@ -60,9 +57,6 @@
                                 <state key="normal" title="Pedagogisch Bekwaam">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="EYk-1w-oQe" kind="show" id="uQY-1C-8Pk"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,10 +109,98 @@
                             <outlet property="delegate" destination="EYk-1w-oQe" id="H1L-DL-soo"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="uDU-8X-1ed" kind="show" identifier="openCompetenceCard" id="FXX-vP-kjI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dh-cK-BBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="89.505247376311857"/>
+            <point key="canvasLocation" x="1826" y="-317"/>
+        </scene>
+        <!--custom-->
+        <scene sceneID="hnN-Lv-sSq">
+            <objects>
+                <viewController title="custom" id="uDU-8X-1ed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x4a-oo-VP8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultaat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaU-Y1-um7">
+                                <rect key="frame" x="16" y="84" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y1w-og-1jE">
+                                <rect key="frame" x="16" y="113" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7Wb-kD-a0s"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5rn-FY-INq">
+                                <rect key="frame" x="16" y="278" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="TxC-ym-iJs"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflectievragen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-lz-fZh">
+                                <rect key="frame" x="16" y="414" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-xw-BXe">
+                                <rect key="frame" x="16" y="443" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="mFm-Xr-GvE"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De leraar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-g7-10p">
+                                <rect key="frame" x="16" y="249" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jaU-Y1-um7" firstAttribute="top" secondItem="5Pz-XP-MFi" secondAttribute="top" constant="20" id="DEh-Fz-DR5"/>
+                            <constraint firstItem="ybN-g7-10p" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="FCC-Up-2b6"/>
+                            <constraint firstItem="ybN-g7-10p" firstAttribute="top" secondItem="y1w-og-1jE" secondAttribute="bottom" constant="8" id="GoB-Ua-0AB"/>
+                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="y1w-og-1jE" secondAttribute="trailing" constant="16" id="Iko-7S-cHL"/>
+                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="ybN-g7-10p" secondAttribute="trailing" constant="16" id="LPP-Xl-ubK"/>
+                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="Me0-xw-BXe" secondAttribute="trailing" constant="16" id="NVU-vc-u3N"/>
+                            <constraint firstItem="y1w-og-1jE" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="Oh2-cO-5f2"/>
+                            <constraint firstItem="5rn-FY-INq" firstAttribute="top" secondItem="ybN-g7-10p" secondAttribute="bottom" constant="8" id="P2I-Fh-sKg"/>
+                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="5rn-FY-INq" secondAttribute="trailing" constant="16" id="TgN-C7-EDg"/>
+                            <constraint firstItem="UoX-lz-fZh" firstAttribute="top" secondItem="5rn-FY-INq" secondAttribute="bottom" constant="8" id="ahq-oL-UAD"/>
+                            <constraint firstItem="Me0-xw-BXe" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="avZ-jL-HwX"/>
+                            <constraint firstItem="jaU-Y1-um7" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="dJu-JP-fju"/>
+                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="UoX-lz-fZh" secondAttribute="trailing" constant="16" id="i2C-2v-MRu"/>
+                            <constraint firstItem="UoX-lz-fZh" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="lTO-8W-K6u"/>
+                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="jaU-Y1-um7" secondAttribute="trailing" constant="16" id="oxT-qo-aVs"/>
+                            <constraint firstItem="Me0-xw-BXe" firstAttribute="top" secondItem="UoX-lz-fZh" secondAttribute="bottom" constant="8" id="r3u-ph-kRQ"/>
+                            <constraint firstItem="y1w-og-1jE" firstAttribute="top" secondItem="jaU-Y1-um7" secondAttribute="bottom" constant="8" id="tRb-rd-H8f"/>
+                            <constraint firstItem="5rn-FY-INq" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="yDU-YO-kii"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Pz-XP-MFi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-Td-K59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799.1999999999998" y="-129.08545727136433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qtd-zt-wH6">
@@ -146,7 +228,4 @@
         <image name="hva-logo" width="1307" height="260"/>
         <image name="juniorleraar-logo" width="308" height="151"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="c66-z6-RBG"/>
-    </inferredMetricsTieBreakers>
 </document>
