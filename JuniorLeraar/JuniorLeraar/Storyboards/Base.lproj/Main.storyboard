@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="801" y="89"/>
         </scene>
-        <!--Comptence Table View Controller-->
+        <!--Competence Table View Controller-->
         <scene sceneID="7zX-Bg-URc">
             <objects>
-                <tableViewController id="EYk-1w-oQe" customClass="ComptenceTableViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="EYk-1w-oQe" customClass="CompetenceTableViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jfJ-XQ-AmI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,6 +114,10 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dh-cK-BBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="E3b-99-uiK">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="1826" y="-317"/>
         </scene>
