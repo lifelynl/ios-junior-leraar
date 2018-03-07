@@ -7,5 +7,6 @@ target 'JuniorLeraar' do
 
   # Pods for JuniorLeraar
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end
