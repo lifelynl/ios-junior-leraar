@@ -110,7 +110,8 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="uDU-8X-1ed" kind="show" identifier="openCompetenceCard" id="FXX-vP-kjI"/>
+                        <segue destination="uDU-8X-1ed" kind="show" identifier="openCard" id="FXX-vP-kjI"/>
+                        <segue destination="cdo-2E-UCm" kind="show" identifier="openCompetenceCard" id="IeJ-vq-haw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dh-cK-BBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,6 +206,135 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-Td-K59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="88.605697151424295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="shK-4m-Xzw">
+            <objects>
+                <viewController id="cdo-2E-UCm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VnX-bs-xle">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBK-UR-cyQ">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2hm-hr-kz2"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hOj-ok-iNi"/>
+                                    <barButtonItem title="Startbekwaam" width="150" id="zRj-aM-e6V" userLabel="StartbekwaamItem"/>
+                                    <barButtonItem title="Bekwaam" width="150" id="Hq2-cb-Hme" userLabel="BekwaamItem"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4U5-Kr-3wl"/>
+                                </items>
+                                <color key="tintColor" red="0.13633590936660767" green="0.087778009474277496" blue="0.45885074138641357" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOy-Bi-Axl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qn7-lh-Xg9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="403"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultaat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENs-T6-vF6" userLabel="ResultaatLabel">
+                                                <rect key="frame" x="8" y="8" width="359" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="De leraar motiveert leerlingen om actief aan de slag te gaan." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BSB-yo-oc1" userLabel="ResultaatTextView">
+                                                <rect key="frame" x="8" y="28.5" width="359" height="49.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De leraar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-Vg-oAn" userLabel="DeLeraarLabel">
+                                                <rect key="frame" x="8" y="78" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-DZ-EoB" userLabel="DeLeraarTextView">
+                                                <rect key="frame" x="8" y="99" width="359" height="166.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">- maakt doel en verwachting van de les duidelijk 
+- zorgt ervoor dat leerlingen de doelen van de les of het thema kennen
+- honoreert inbreng en creatieve invulling van leerlingen 
+- luistert aandachtig naar leerlingen 
+- biedt een keuze bij opdrachten
+- maakt gebruik van voorkennis en activeert voorkennis</string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflectievragen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-9o-wFh" userLabel="ReflectievragenLabel">
+                                                <rect key="frame" x="8" y="265.5" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ8-Og-Ygh" userLabel="ReflectievragenTextView">
+                                                <rect key="frame" x="8" y="286.5" width="359" height="116.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Hoe maak je het doel en jouw verwachting van de les duidelijk?
+Wat levert een keuze bij opdrachten jou en je leerlingen op? Waar loop je eventueel tegen aan?
+Voor welke keuzes kom je te staan bij het motiveren van leerlingen?
+Welke manieren ken je uit de theorie om leerlingen te motiveren om te leren? Welke manier zet je in?
+Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
+</string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="IZ8-Og-Ygh" firstAttribute="top" secondItem="bAf-9o-wFh" secondAttribute="bottom" id="5bB-re-T3K"/>
+                                            <constraint firstItem="bAf-9o-wFh" firstAttribute="leading" secondItem="Qn7-lh-Xg9" secondAttribute="leading" constant="8" id="5t9-Ad-dA7"/>
+                                            <constraint firstAttribute="bottom" secondItem="IZ8-Og-Ygh" secondAttribute="bottom" id="6yu-eg-9nr"/>
+                                            <constraint firstItem="ENs-T6-vF6" firstAttribute="leading" secondItem="Qn7-lh-Xg9" secondAttribute="leading" constant="8" id="71j-0m-mmA"/>
+                                            <constraint firstAttribute="trailing" secondItem="fOj-DZ-EoB" secondAttribute="trailing" constant="8" id="Txk-9C-Waz"/>
+                                            <constraint firstItem="bAf-9o-wFh" firstAttribute="top" secondItem="fOj-DZ-EoB" secondAttribute="bottom" id="X6b-fn-kc1"/>
+                                            <constraint firstAttribute="trailing" secondItem="bAf-9o-wFh" secondAttribute="trailing" constant="8" id="a5d-WX-HCh"/>
+                                            <constraint firstAttribute="trailing" secondItem="IZ8-Og-Ygh" secondAttribute="trailing" constant="8" id="bmc-nv-cWs"/>
+                                            <constraint firstItem="BSB-yo-oc1" firstAttribute="leading" secondItem="Qn7-lh-Xg9" secondAttribute="leading" constant="8" id="c05-hh-wdC"/>
+                                            <constraint firstItem="bAf-9o-wFh" firstAttribute="leading" secondItem="Qn7-lh-Xg9" secondAttribute="leading" constant="8" id="c1h-DU-4nV"/>
+                                            <constraint firstItem="bAf-9o-wFh" firstAttribute="top" secondItem="fOj-DZ-EoB" secondAttribute="bottom" id="cf6-VO-ENg"/>
+                                            <constraint firstItem="BSB-yo-oc1" firstAttribute="top" secondItem="ENs-T6-vF6" secondAttribute="bottom" id="cmz-D7-2sK"/>
+                                            <constraint firstAttribute="trailing" secondItem="ENs-T6-vF6" secondAttribute="trailing" constant="8" id="d1V-kJ-WkL"/>
+                                            <constraint firstItem="fOj-DZ-EoB" firstAttribute="top" secondItem="6JL-Vg-oAn" secondAttribute="bottom" id="dMZ-iS-tUU"/>
+                                            <constraint firstItem="IZ8-Og-Ygh" firstAttribute="leading" secondItem="Qn7-lh-Xg9" secondAttribute="leading" constant="8" id="kNd-bY-7ic"/>
+                                            <constraint firstAttribute="trailing" secondItem="BSB-yo-oc1" secondAttribute="trailing" constant="8" id="kmO-QJ-IJK"/>
+                                            <constraint firstItem="fOj-DZ-EoB" firstAttribute="leading" secondItem="Qn7-lh-Xg9" secondAttribute="leading" constant="8" id="r7l-wp-a6J"/>
+                                            <constraint firstItem="ENs-T6-vF6" firstAttribute="top" secondItem="Qn7-lh-Xg9" secondAttribute="top" constant="8" id="rCa-it-xhV"/>
+                                            <constraint firstItem="6JL-Vg-oAn" firstAttribute="top" secondItem="BSB-yo-oc1" secondAttribute="bottom" id="re9-GS-j6c"/>
+                                            <constraint firstItem="6JL-Vg-oAn" firstAttribute="leading" secondItem="Qn7-lh-Xg9" secondAttribute="leading" constant="8" id="tMQ-Hk-L3e"/>
+                                            <constraint firstAttribute="trailing" secondItem="bAf-9o-wFh" secondAttribute="trailing" constant="8" id="wJR-TG-Oa8"/>
+                                            <constraint firstAttribute="trailing" secondItem="6JL-Vg-oAn" secondAttribute="trailing" constant="8" id="wu7-ae-1N5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qn7-lh-Xg9" firstAttribute="leading" secondItem="YOy-Bi-Axl" secondAttribute="leading" id="2Vs-Vm-QHb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qn7-lh-Xg9" secondAttribute="trailing" id="3g7-AY-xCk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qn7-lh-Xg9" secondAttribute="bottom" id="FO0-T0-F9A"/>
+                                    <constraint firstItem="Qn7-lh-Xg9" firstAttribute="width" secondItem="YOy-Bi-Axl" secondAttribute="width" id="clM-QP-osD"/>
+                                    <constraint firstItem="Qn7-lh-Xg9" firstAttribute="top" secondItem="YOy-Bi-Axl" secondAttribute="top" id="u06-x0-EnB"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bs2-Vn-HK0" firstAttribute="bottom" secondItem="YOy-Bi-Axl" secondAttribute="bottom" constant="44" id="6WB-GJ-wx6"/>
+                            <constraint firstItem="pBK-UR-cyQ" firstAttribute="trailing" secondItem="bs2-Vn-HK0" secondAttribute="trailing" id="HH6-Te-e7a"/>
+                            <constraint firstItem="YOy-Bi-Axl" firstAttribute="top" secondItem="bs2-Vn-HK0" secondAttribute="top" id="HfI-fp-t9F"/>
+                            <constraint firstItem="pBK-UR-cyQ" firstAttribute="leading" secondItem="bs2-Vn-HK0" secondAttribute="leading" id="TS0-aT-1uN"/>
+                            <constraint firstItem="bs2-Vn-HK0" firstAttribute="trailing" secondItem="YOy-Bi-Axl" secondAttribute="trailing" id="WGx-vP-Uu3"/>
+                            <constraint firstItem="YOy-Bi-Axl" firstAttribute="leading" secondItem="bs2-Vn-HK0" secondAttribute="leading" id="Wwk-pz-Kjv"/>
+                            <constraint firstItem="pBK-UR-cyQ" firstAttribute="bottom" secondItem="bs2-Vn-HK0" secondAttribute="bottom" id="bOV-ky-xFH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bs2-Vn-HK0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q62-HG-lgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2856.8000000000002" y="858.62068965517244"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qtd-zt-wH6">

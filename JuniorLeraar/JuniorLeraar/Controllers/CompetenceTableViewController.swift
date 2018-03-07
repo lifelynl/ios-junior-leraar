@@ -1,5 +1,5 @@
 //
-//  ComptenceTableViewController.swift
+//  CompetenceTableViewController.swift
 //  JuniorLeraar
 //
 //  Created by Jasper Zwiers on 15-02-18.
@@ -34,7 +34,6 @@ class CompetenceTableViewController: UITableViewController {
 
     func setupStyling() {
         navigationItem.title = "Didactisch Bekwaam"
-        
     }
     
     func setupReferences() {
