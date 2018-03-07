@@ -12,36 +12,34 @@ import Foundation
 
 class CompetenceTableViewController: UITableViewController {
 
-    @IBOutlet weak var knopje: UIButton!
-    @IBOutlet weak var cellLabel: UILabel!
     private var dialoguecardRef: DatabaseReference?
-    var arraytje = ["Motiveren en inspireren van leerlingen", "Orientatie op de leerstof", "Betrekken van alle leerlingen bij de les", "Instructie leerstof en opdrachten"]
     var cardsArray = [Card]()
     var startbekwaamCards = [Card]()
+    var tableHeaders = [String]()
+    var tableValues = [[String]]()
     
-    @IBAction func knopjeklikken(_ sender: Any) {
-        print(cardsArray.count)
-        for item in cardsArray {
-            print(item.title)
-        }
-    }
-    
+    var groupA = [String]()
+    var groupB = [String]()
+    var groupC = [String]()
+    var groupD = [String]()
+    var groupE = [String]()
+    var groupF = [String]()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupReferences()
         setupStyling()
         tableView.dataSource = self
-        print("jasperrrrrrrr")
     }
 
     func setupStyling() {
-        
         navigationItem.title = "Didactisch Bekwaam"
+        
     }
     
     func setupReferences() {
-        Database.database().isPersistenceEnabled = true
         dialoguecardRef = Database.database().reference(withPath: "Dialoguecard")
+        dialoguecardRef?.keepSynced(true)
         observeCards()
     }
     
@@ -51,20 +49,13 @@ class CompetenceTableViewController: UITableViewController {
                 if let cardSnapshot = item as? DataSnapshot {
                     let card = Card(snapshot: cardSnapshot)
                     self.cardsArray.append(card)
-                    print(self.cardsArray.count)
                 }
             }
             self.getCards()
-            self.tableView.reloadData()
         })
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
     
     func getCards() {
         var count = 0
@@ -74,31 +65,77 @@ class CompetenceTableViewController: UITableViewController {
                 count = count + 1
             }
         }
+        getTableHeaders()
+    }
+    
+    func getTableHeaders() {
+        for card in startbekwaamCards {
+            let competence = card.competence
+            if (tableHeaders.contains(competence) == false) {
+                tableHeaders.append(competence)
+            }
+        }
+        getTableValues()
+    }
+    
+    func getTableValues () {
+        for card in startbekwaamCards {
+            if (card.competence == tableHeaders[0]) {
+                groupA.append(card.title)
+            } else if (card.competence == tableHeaders[1]) {
+                groupB.append(card.title)
+            } else if (card.competence == tableHeaders[2]) {
+                groupC.append(card.title)
+            } else if (card.competence == tableHeaders[3]) {
+                groupD.append(card.title)
+            } else if (card.competence == tableHeaders[4]) {
+                groupE.append(card.title)
+            } else if (card.competence == tableHeaders[5]) {
+                groupF.append(card.title)
+            }
+        }
+        tableValues.append(groupA)
+        tableValues.append(groupB)
+        tableValues.append(groupC)
+        tableValues.append(groupD)
+        tableValues.append(groupE)
+        tableValues.append(groupF)
+        self.tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        var count = 0
-//        for card in cardsArray {
-//            if (card.level.lowercased() == "startbekwaam") {
-//                count = count + 1
-//            }
-//        }
-        return startbekwaamCards.count;
+        if (section == 0) {
+            return groupA.count
+        } else if (section == 1) {
+            return groupB.count
+        } else if (section == 2){
+            return groupC.count
+        } else if (section == 3){
+            return groupD.count
+        } else if (section == 4){
+            return groupE.count
+        } else if (section == 5){
+            return groupF.count
+        } else {
+            return 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
-        let card = startbekwaamCards[indexPath.row]
-        print(card.level)
-        print(card.title)
-        if (card.level.lowercased() == "startbekwaam") {
-            cell.textLabel?.text = card.title
-        }
+        cell.textLabel?.text = tableValues[indexPath.section][indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selectedProduct = filteredProductsArray[indexPath.row]
         performSegue(withIdentifier: "openCompetenceCard", sender: self)
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return tableHeaders.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return tableHeaders[section]
     }
 }

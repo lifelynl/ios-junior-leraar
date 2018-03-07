@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="70" id="wwF-FY-nyd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Didactische Bekwaam">
+                                <state key="normal" title="Didactisch Bekwaam">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="89"/>
+            <point key="canvasLocation" x="954" y="89"/>
         </scene>
         <!--Competence Table View Controller-->
         <scene sceneID="7zX-Bg-URc">
@@ -95,10 +95,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="customcell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="cAT-TO-9f2" userLabel="customcell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customcell" id="2hF-ga-uTV">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cAT-TO-9f2" id="MFp-wy-Hho">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hF-ga-uTV" id="6fo-Yu-x7t">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -119,75 +119,75 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="1826" y="-317"/>
+            <point key="canvasLocation" x="1868" y="89"/>
         </scene>
-        <!--custom-->
+        <!--Motiveren en inspireren van leerlingen-->
         <scene sceneID="hnN-Lv-sSq">
             <objects>
-                <viewController title="custom" id="uDU-8X-1ed" sceneMemberID="viewController">
+                <viewController title="Motiveren en inspireren van leerlingen" id="uDU-8X-1ed" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x4a-oo-VP8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultaat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaU-Y1-um7">
-                                <rect key="frame" x="16" y="84" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Resultaat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaU-Y1-um7">
+                                <rect key="frame" x="16" y="84" width="343" height="16"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y1w-og-1jE">
-                                <rect key="frame" x="16" y="113" width="343" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="De leraar motiveert leerlingen om actief aan de slag te gaan." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1w-og-1jE">
+                                <rect key="frame" x="16" y="108" width="343" height="49.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="7Wb-kD-a0s"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5rn-FY-INq">
-                                <rect key="frame" x="16" y="278" width="343" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rn-FY-INq">
+                                <rect key="frame" x="16" y="183" width="343" height="72"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="TxC-ym-iJs"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">- maakt doel en verwachting van de les duidelijk 
+- zorgt ervoor dat leerlingen de doelen van de les of het thema kennen
+- honoreert inbreng en creatieve invulling van leerlingen 
+- luistert aandachtig naar leerlingen 
+- biedt een keuze bij opdrachten
+- maakt gebruik van voorkennis en activeert voorkennis</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflectievragen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-lz-fZh">
-                                <rect key="frame" x="16" y="414" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-xw-BXe">
-                                <rect key="frame" x="16" y="443" width="343" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="mFm-Xr-GvE"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De leraar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-g7-10p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reflectievragen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-lz-fZh">
                                 <rect key="frame" x="16" y="249" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="De leraar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-g7-10p">
+                                <rect key="frame" x="16" y="154" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-xw-BXe">
+                                <rect key="frame" x="16" y="278" width="343" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Hoe maak je het doel en jouw verwachting van de les duidelijk?
+Wat levert een keuze bij opdrachten jou en je leerlingen op? Waar loop je eventueel tegen aan?
+Voor welke keuzes kom je te staan bij het motiveren van leerlingen?
+Welke manieren ken je uit de theorie om leerlingen te motiveren om te leren? Welke manier zet je in?
+Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jaU-Y1-um7" firstAttribute="top" secondItem="5Pz-XP-MFi" secondAttribute="top" constant="20" id="DEh-Fz-DR5"/>
+                            <constraint firstItem="jaU-Y1-um7" firstAttribute="top" secondItem="5Pz-XP-MFi" secondAttribute="top" constant="10" id="DEh-Fz-DR5" userLabel="Resultaat.top = Safe Area.top + 10"/>
                             <constraint firstItem="ybN-g7-10p" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="FCC-Up-2b6"/>
                             <constraint firstItem="ybN-g7-10p" firstAttribute="top" secondItem="y1w-og-1jE" secondAttribute="bottom" constant="8" id="GoB-Ua-0AB"/>
                             <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="y1w-og-1jE" secondAttribute="trailing" constant="16" id="Iko-7S-cHL"/>
                             <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="ybN-g7-10p" secondAttribute="trailing" constant="16" id="LPP-Xl-ubK"/>
                             <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="Me0-xw-BXe" secondAttribute="trailing" constant="16" id="NVU-vc-u3N"/>
                             <constraint firstItem="y1w-og-1jE" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="Oh2-cO-5f2"/>
-                            <constraint firstItem="5rn-FY-INq" firstAttribute="top" secondItem="ybN-g7-10p" secondAttribute="bottom" constant="8" id="P2I-Fh-sKg"/>
+                            <constraint firstItem="5rn-FY-INq" firstAttribute="top" secondItem="ybN-g7-10p" secondAttribute="bottom" id="P2I-Fh-sKg" userLabel="Text View.top = De leraar.bottom"/>
                             <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="5rn-FY-INq" secondAttribute="trailing" constant="16" id="TgN-C7-EDg"/>
                             <constraint firstItem="UoX-lz-fZh" firstAttribute="top" secondItem="5rn-FY-INq" secondAttribute="bottom" constant="8" id="ahq-oL-UAD"/>
                             <constraint firstItem="Me0-xw-BXe" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="avZ-jL-HwX"/>
@@ -195,8 +195,8 @@
                             <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="UoX-lz-fZh" secondAttribute="trailing" constant="16" id="i2C-2v-MRu"/>
                             <constraint firstItem="UoX-lz-fZh" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="lTO-8W-K6u"/>
                             <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="jaU-Y1-um7" secondAttribute="trailing" constant="16" id="oxT-qo-aVs"/>
-                            <constraint firstItem="Me0-xw-BXe" firstAttribute="top" secondItem="UoX-lz-fZh" secondAttribute="bottom" constant="8" id="r3u-ph-kRQ"/>
-                            <constraint firstItem="y1w-og-1jE" firstAttribute="top" secondItem="jaU-Y1-um7" secondAttribute="bottom" constant="8" id="tRb-rd-H8f"/>
+                            <constraint firstItem="Me0-xw-BXe" firstAttribute="top" secondItem="UoX-lz-fZh" secondAttribute="bottom" id="r3u-ph-kRQ" userLabel="Text View.top = Reflectievragen.bottom"/>
+                            <constraint firstItem="y1w-og-1jE" firstAttribute="top" secondItem="jaU-Y1-um7" secondAttribute="bottom" id="tRb-rd-H8f" userLabel="Text View.top = Resultaat.bottom"/>
                             <constraint firstItem="5rn-FY-INq" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="yDU-YO-kii"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Pz-XP-MFi"/>
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-Td-K59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799.1999999999998" y="-129.08545727136433"/>
+            <point key="canvasLocation" x="2856.8000000000002" y="88.605697151424295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qtd-zt-wH6">
