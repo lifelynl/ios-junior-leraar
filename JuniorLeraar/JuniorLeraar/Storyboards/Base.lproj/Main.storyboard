@@ -44,7 +44,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-Ex-rqS">
                                 <rect key="frame" x="0.0" y="527" width="375" height="70"/>
-                                <color key="backgroundColor" red="1" green="0.82352941176470584" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Collegiale Samenwerking">
                                     <color key="titleColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,7 +125,7 @@
         <!--Motiveren en inspireren van leerlingen-->
         <scene sceneID="hnN-Lv-sSq">
             <objects>
-                <viewController title="Motiveren en inspireren van leerlingen" id="uDU-8X-1ed" sceneMemberID="viewController">
+                <viewController title="Motiveren en inspireren van leerlingen" id="uDU-8X-1ed" customClass="CardViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x4a-oo-VP8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,10 +207,10 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="88.605697151424295"/>
         </scene>
-        <!--View Controller-->
+        <!--Card View Controller-->
         <scene sceneID="shK-4m-Xzw">
             <objects>
-                <viewController id="cdo-2E-UCm" sceneMemberID="viewController">
+                <viewController id="cdo-2E-UCm" customClass="CardViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VnX-bs-xle">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,8 +222,16 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hOj-ok-iNi"/>
-                                    <barButtonItem title="Startbekwaam" width="150" id="zRj-aM-e6V" userLabel="StartbekwaamItem"/>
-                                    <barButtonItem title="Bekwaam" width="150" id="Hq2-cb-Hme" userLabel="BekwaamItem"/>
+                                    <barButtonItem title="Startbekwaam" width="150" id="zRj-aM-e6V" userLabel="StartbekwaamItem">
+                                        <connections>
+                                            <action selector="startbekwaamButton:" destination="cdo-2E-UCm" id="Jvr-Ne-tRw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Bekwaam" width="150" id="Hq2-cb-Hme" userLabel="BekwaamItem">
+                                        <connections>
+                                            <action selector="bekwaamButton:" destination="cdo-2E-UCm" id="zmg-uQ-lcb"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4U5-Kr-3wl"/>
                                 </items>
                                 <color key="tintColor" red="0.13633590936660767" green="0.087778009474277496" blue="0.45885074138641357" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -331,6 +339,11 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bs2-Vn-HK0"/>
                     </view>
+                    <connections>
+                        <outlet property="deLeraarTextView" destination="fOj-DZ-EoB" id="lCj-Cw-axg"/>
+                        <outlet property="reflectievragenTextView" destination="IZ8-Og-Ygh" id="Qp7-nt-c10"/>
+                        <outlet property="resultTextView" destination="BSB-yo-oc1" id="vfY-rt-H4T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q62-HG-lgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

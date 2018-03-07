@@ -32,8 +32,19 @@ class CompetenceTableViewController: UITableViewController {
         tableView.dataSource = self
     }
 
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = Constants.purpleblue20
+    }
+    
     func setupStyling() {
         navigationItem.title = "Didactisch Bekwaam"
+        navigationController?.navigationBar.barTintColor = Constants.purpleblue
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+//        navigationController?.navigationItem.backBarButtonItem = Cons
+//        tableView.backgroundColor = Constants.purpleblue50
+//        self.tableView.backgroundColor = Constants.lightblue20
+        
     }
     
     func setupReferences() {
@@ -59,7 +70,7 @@ class CompetenceTableViewController: UITableViewController {
     func getCards() {
         var count = 0
         for card in cardsArray {
-            if (card.level.lowercased() == "startbekwaam") {
+            if (card.level.lowercased() == "startbekwaam" && card.theme.lowercased() == "didactisch bekwaam") {
                 startbekwaamCards.append(card)
                 count = count + 1
             }
@@ -123,6 +134,7 @@ class CompetenceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.text = tableValues[indexPath.section][indexPath.row]
+//        cell.backgroundColor = Constants.lightblue20
         return cell
     }
     
