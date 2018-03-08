@@ -327,9 +327,11 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                         <viewLayoutGuide key="safeArea" id="bs2-Vn-HK0"/>
                     </view>
                     <connections>
+                        <outlet property="bekwaamButton" destination="Hq2-cb-Hme" id="ytm-53-HDd"/>
                         <outlet property="deLeraarTextView" destination="fOj-DZ-EoB" id="lCj-Cw-axg"/>
                         <outlet property="reflectievragenTextView" destination="IZ8-Og-Ygh" id="Qp7-nt-c10"/>
                         <outlet property="resultTextView" destination="BSB-yo-oc1" id="vfY-rt-H4T"/>
+                        <outlet property="startbekwaamButton" destination="zRj-aM-e6V" id="x5S-Td-CxO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q62-HG-lgf" userLabel="First Responder" sceneMemberID="firstResponder"/>

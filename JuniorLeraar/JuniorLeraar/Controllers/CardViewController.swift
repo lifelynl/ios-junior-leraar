@@ -15,6 +15,8 @@ class CardViewController: UIViewController {
     @IBOutlet weak var deLeraarTextView: UITextView!
     @IBOutlet weak var reflectievragenTextView: UITextView!
     
+    @IBOutlet weak var bekwaamButton: UIBarButtonItem!
+    @IBOutlet weak var startbekwaamButton: UIBarButtonItem!
     private var dialoguecardRef: DatabaseReference?
     var cardsArray = [Card]()
     
@@ -33,15 +35,21 @@ class CardViewController: UIViewController {
     }
     
     func setStartbekwaamCardText() {
+        navigationItem.title = "Startbekwaam"
+        bekwaamButton.tintColor = Constants.purpleblue
+        startbekwaamButton.tintColor = UIColor.black
         resultTextView.text = cardsArray[0].resultText
-        deLeraarTextView.text = cardsArray[0].teacherText
-        reflectievragenTextView.text = cardsArray[0].questionText
+        deLeraarTextView.text = cardsArray[0].teacherText.replacingOccurrences(of: "#", with: "\n∙")
+        reflectievragenTextView.text = cardsArray[0].questionText.replacingOccurrences(of: "#", with: "\n∙")
     }
     
     func setBekwaamCardText() {
+        navigationItem.title = "Bekwaam"
+        startbekwaamButton.tintColor = Constants.purpleblue
+        bekwaamButton.tintColor = UIColor.black
         resultTextView.text = cardsArray[1].resultText
-        deLeraarTextView.text = cardsArray[1].teacherText
-        reflectievragenTextView.text = cardsArray[1].questionText
+        deLeraarTextView.text = cardsArray[1].teacherText.replacingOccurrences(of: "#", with: "\n∙")
+        reflectievragenTextView.text = cardsArray[1].questionText.replacingOccurrences(of: "#", with: "\n∙")
     }
     
     func setupReferences() {
