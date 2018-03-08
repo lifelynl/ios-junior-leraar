@@ -133,6 +133,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = tableValues[indexPath.section][indexPath.row]
 //        cell.backgroundColor = Constants.lightblue20
         return cell

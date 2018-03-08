@@ -12,7 +12,6 @@ import FirebaseDatabase
 class Card {
     let competence: String
     let level: String
-    let text: String
     let theme: String
     let title: String
     let teacherText: String
@@ -20,10 +19,9 @@ class Card {
     let questionText: String
     let ref: DatabaseReference?
     
-    init(competence: String, level: String, questionText: String, resultText: String, teacherText: String, text: String, theme: String, title: String) {
+    init(competence: String, level: String, questionText: String, resultText: String, teacherText: String, theme: String, title: String) {
         self.competence = competence
         self.level = level
-        self.text = text
         self.theme = theme
         self.title = title
         self.teacherText = teacherText
@@ -36,10 +34,9 @@ class Card {
         let dict = snapshot.value as! [String:AnyObject]
         self.competence = dict["competence"] as! String
         self.level = dict["level"] as! String
-        self.questionText = dict["questiontext"] as! String
+        self.questionText = dict["questionText"] as! String
         self.resultText = dict["resultText"] as! String
         self.teacherText = dict["teacherText"] as! String
-        self.text = dict["text"] as! String
         self.theme = dict["theme"] as! String
         self.title = dict["title"] as! String
         self.ref = snapshot.ref
@@ -52,12 +49,11 @@ class Card {
         return [
             "competence": competence,
             "level": level,
-            "text": text,
             "theme": theme,
             "title": title,
             "teacherText": teacherText,
             "resultText": resultText,
-            "questiontext": questionText
+            "questionText": questionText
         ]
     }
 }
