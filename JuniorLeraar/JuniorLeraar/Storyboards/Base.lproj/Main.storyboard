@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +49,9 @@
                                 <state key="normal" title="Collegiale Samenwerking">
                                     <color key="titleColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="9Md-f1-6fo" kind="show" id="mqR-go-lWN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjU-27-0Xp">
                                 <rect key="frame" x="0.0" y="597" width="375" height="70"/>
@@ -57,6 +60,9 @@
                                 <state key="normal" title="Pedagogisch Bekwaam">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vj4-Qq-oee" kind="show" id="tua-c8-yjB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,15 +87,51 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="FVf-mL-U6I"/>
+                    <connections>
+                        <outlet property="collegialeSamenwerkingButton" destination="Qfx-Ex-rqS" id="zbs-Lz-eZn"/>
+                        <outlet property="didactischBekwaamButton" destination="TuO-zN-Ltz" id="WTv-nB-2V5"/>
+                        <outlet property="pedagogischBekwaamButton" destination="pjU-27-0Xp" id="20y-f5-5Xo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954" y="89"/>
         </scene>
-        <!--Competence Table View Controller-->
+        <!--Pedagogisch Bekwaam Table View Controller-->
+        <scene sceneID="Ueu-H8-ULw">
+            <objects>
+                <tableViewController id="vj4-Qq-oee" customClass="PedagogischBekwaamTableViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f4j-1W-Uic">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9Bs-os-4I3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Bs-os-4I3" id="aEM-7a-4tn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vj4-Qq-oee" id="ugS-sV-o17"/>
+                            <outlet property="delegate" destination="vj4-Qq-oee" id="q92-SH-YGn"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="cdo-2E-UCm" kind="show" identifier="openCompetenceCardPedagogischBekwaam" id="Oej-yP-Koz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37A-ye-v8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="-651"/>
+        </scene>
+        <!--Didactisch Bekwaam Table View Controller-->
         <scene sceneID="7zX-Bg-URc">
             <objects>
-                <tableViewController id="EYk-1w-oQe" customClass="CompetenceTableViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="EYk-1w-oQe" customClass="DidactischBekwaamTableViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jfJ-XQ-AmI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +152,6 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="uDU-8X-1ed" kind="show" identifier="openCard" id="FXX-vP-kjI"/>
                         <segue destination="cdo-2E-UCm" kind="show" identifier="openCompetenceCard" id="IeJ-vq-haw"/>
                     </connections>
                 </tableViewController>
@@ -122,90 +163,36 @@
             </objects>
             <point key="canvasLocation" x="1868" y="89"/>
         </scene>
-        <!--Motiveren en inspireren van leerlingen-->
-        <scene sceneID="hnN-Lv-sSq">
+        <!--Collegiale Samenwerking Table View Controller-->
+        <scene sceneID="oqw-c6-jWv">
             <objects>
-                <viewController title="Motiveren en inspireren van leerlingen" id="uDU-8X-1ed" customClass="CardViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x4a-oo-VP8">
+                <tableViewController id="9Md-f1-6fo" customClass="CollegialeSamenwerkingTableViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kA7-yb-98U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Resultaat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaU-Y1-um7">
-                                <rect key="frame" x="16" y="84" width="343" height="16"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="De leraar motiveert leerlingen om actief aan de slag te gaan." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1w-og-1jE">
-                                <rect key="frame" x="16" y="108" width="343" height="49.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rn-FY-INq">
-                                <rect key="frame" x="16" y="183" width="343" height="72"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">- maakt doel en verwachting van de les duidelijk 
-- zorgt ervoor dat leerlingen de doelen van de les of het thema kennen
-- honoreert inbreng en creatieve invulling van leerlingen 
-- luistert aandachtig naar leerlingen 
-- biedt een keuze bij opdrachten
-- maakt gebruik van voorkennis en activeert voorkennis</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reflectievragen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-lz-fZh">
-                                <rect key="frame" x="16" y="249" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="De leraar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-g7-10p">
-                                <rect key="frame" x="16" y="154" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-xw-BXe">
-                                <rect key="frame" x="16" y="278" width="343" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Hoe maak je het doel en jouw verwachting van de les duidelijk?
-Wat levert een keuze bij opdrachten jou en je leerlingen op? Waar loop je eventueel tegen aan?
-Voor welke keuzes kom je te staan bij het motiveren van leerlingen?
-Welke manieren ken je uit de theorie om leerlingen te motiveren om te leren? Welke manier zet je in?
-Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
-</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="jaU-Y1-um7" firstAttribute="top" secondItem="5Pz-XP-MFi" secondAttribute="top" constant="10" id="DEh-Fz-DR5" userLabel="Resultaat.top = Safe Area.top + 10"/>
-                            <constraint firstItem="ybN-g7-10p" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="FCC-Up-2b6"/>
-                            <constraint firstItem="ybN-g7-10p" firstAttribute="top" secondItem="y1w-og-1jE" secondAttribute="bottom" constant="8" id="GoB-Ua-0AB"/>
-                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="y1w-og-1jE" secondAttribute="trailing" constant="16" id="Iko-7S-cHL"/>
-                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="ybN-g7-10p" secondAttribute="trailing" constant="16" id="LPP-Xl-ubK"/>
-                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="Me0-xw-BXe" secondAttribute="trailing" constant="16" id="NVU-vc-u3N"/>
-                            <constraint firstItem="y1w-og-1jE" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="Oh2-cO-5f2"/>
-                            <constraint firstItem="5rn-FY-INq" firstAttribute="top" secondItem="ybN-g7-10p" secondAttribute="bottom" id="P2I-Fh-sKg" userLabel="Text View.top = De leraar.bottom"/>
-                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="5rn-FY-INq" secondAttribute="trailing" constant="16" id="TgN-C7-EDg"/>
-                            <constraint firstItem="UoX-lz-fZh" firstAttribute="top" secondItem="5rn-FY-INq" secondAttribute="bottom" constant="8" id="ahq-oL-UAD"/>
-                            <constraint firstItem="Me0-xw-BXe" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="avZ-jL-HwX"/>
-                            <constraint firstItem="jaU-Y1-um7" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="dJu-JP-fju"/>
-                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="UoX-lz-fZh" secondAttribute="trailing" constant="16" id="i2C-2v-MRu"/>
-                            <constraint firstItem="UoX-lz-fZh" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="lTO-8W-K6u"/>
-                            <constraint firstItem="5Pz-XP-MFi" firstAttribute="trailing" secondItem="jaU-Y1-um7" secondAttribute="trailing" constant="16" id="oxT-qo-aVs"/>
-                            <constraint firstItem="Me0-xw-BXe" firstAttribute="top" secondItem="UoX-lz-fZh" secondAttribute="bottom" id="r3u-ph-kRQ" userLabel="Text View.top = Reflectievragen.bottom"/>
-                            <constraint firstItem="y1w-og-1jE" firstAttribute="top" secondItem="jaU-Y1-um7" secondAttribute="bottom" id="tRb-rd-H8f" userLabel="Text View.top = Resultaat.bottom"/>
-                            <constraint firstItem="5rn-FY-INq" firstAttribute="leading" secondItem="5Pz-XP-MFi" secondAttribute="leading" constant="16" id="yDU-YO-kii"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="5Pz-XP-MFi"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-Td-K59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="xTO-jL-hLg" userLabel="cell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xTO-jL-hLg" id="eeN-PM-kjC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9Md-f1-6fo" id="Pcu-QZ-1f0"/>
+                            <outlet property="delegate" destination="9Md-f1-6fo" id="lWt-F8-4ls"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="cdo-2E-UCm" kind="show" identifier="openCompetenceCardCollegialeSamenwerking" id="Sl5-vy-2Pn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtV-ka-QQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856.8000000000002" y="88.605697151424295"/>
+            <point key="canvasLocation" x="1868" y="864"/>
         </scene>
         <!--Card View Controller-->
         <scene sceneID="shK-4m-Xzw">
@@ -347,7 +334,7 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q62-HG-lgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856.8000000000002" y="858.62068965517244"/>
+            <point key="canvasLocation" x="2856" y="89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qtd-zt-wH6">
@@ -375,4 +362,7 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
         <image name="hva-logo" width="1307" height="260"/>
         <image name="juniorleraar-logo" width="308" height="151"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Oej-yP-Koz"/>
+    </inferredMetricsTieBreakers>
 </document>

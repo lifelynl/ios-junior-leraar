@@ -25,17 +25,27 @@ class CardViewController: UIViewController {
     }
 
     @IBAction func startbekwaamButton(_ sender: Any) {
+        setStartbekwaamCardText()
+    }
+    
+    @IBAction func bekwaamButton(_ sender: Any) {
+        setBekwaamCardText()
+    }
+    
+    func setStartbekwaamCardText() {
         resultTextView.text = cardsArray[0].resultText
         deLeraarTextView.text = cardsArray[0].teacherText
         reflectievragenTextView.text = cardsArray[0].questionText
     }
     
-    @IBAction func bekwaamButton(_ sender: Any) {
-        resultTextView.text = cardsArray[0].teacherText
+    func setBekwaamCardText() {
+        resultTextView.text = cardsArray[1].resultText
+        deLeraarTextView.text = cardsArray[1].teacherText
+        reflectievragenTextView.text = cardsArray[1].questionText
     }
     
     func setupReferences() {
-        dialoguecardRef = Database.database().reference(withPath: "Dialoguecard")
+        dialoguecardRef = Constants.getRootRef()
         dialoguecardRef?.keepSynced(true)
         observeCards()
     }
@@ -48,6 +58,7 @@ class CardViewController: UIViewController {
                     self.cardsArray.append(card)
                 }
             }
+            self.setStartbekwaamCardText()
         })
     }
 }

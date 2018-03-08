@@ -31,4 +31,9 @@ struct Constants {
     static let purpleblue20 = purpleblue.withAlphaComponent(0.2)
     static let yellow20 = yellow.withAlphaComponent(0.2)
     static let lightblue20 = lightblue.withAlphaComponent(0.2)
+    
+    //      PRAGMA MARK: Firebase
+    static func getRootRef() -> DatabaseReference { return Database.database().reference(withPath: firebaseCardsTable) }
+    
+    static let firebaseCardsTable = "Dialoguecard"
 }

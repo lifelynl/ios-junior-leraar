@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import Foundation
 
-class CompetenceTableViewController: UITableViewController {
+class DidactischBekwaamTableViewController: UITableViewController {
 
     private var dialoguecardRef: DatabaseReference?
     var cardsArray = [Card]()
@@ -48,7 +48,7 @@ class CompetenceTableViewController: UITableViewController {
     }
     
     func setupReferences() {
-        dialoguecardRef = Database.database().reference(withPath: "Dialoguecard")
+        dialoguecardRef = Constants.getRootRef()
         dialoguecardRef?.keepSynced(true)
         observeCards()
     }
