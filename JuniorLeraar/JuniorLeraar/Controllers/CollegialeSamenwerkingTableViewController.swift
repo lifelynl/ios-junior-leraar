@@ -14,6 +14,7 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
     private var dialoguecardRef: DatabaseReference?
     var cardsArray = [Card]()
     var startbekwaamCards = [Card]()
+    var selectedCard: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,17 +77,14 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCard = startbekwaamCards[indexPath.row].title
         performSegue(withIdentifier: "openCompetenceCardCollegialeSamenwerking", sender: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "openCompetenceCardCollegialeSamenwerking") {
+            let yourNextViewController = segue.destination as! CardViewController
+            yourNextViewController.selectedCard = selectedCard
+        }
     }
-    */
-
 }

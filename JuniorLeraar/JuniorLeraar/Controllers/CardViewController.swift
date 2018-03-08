@@ -19,6 +19,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var startbekwaamButton: UIBarButtonItem!
     private var dialoguecardRef: DatabaseReference?
     var cardsArray = [Card]()
+    var selectedCard = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class CardViewController: UIViewController {
         observeCards()
     }
 
+//    func selectedCard(title: String) {
+//        print(title)
+//        return selectedCard = title
+//    }
     @IBAction func startbekwaamButton(_ sender: Any) {
         setStartbekwaamCardText()
     }
@@ -38,18 +43,30 @@ class CardViewController: UIViewController {
         navigationItem.title = "Startbekwaam"
         bekwaamButton.tintColor = Constants.purpleblue
         startbekwaamButton.tintColor = UIColor.black
-        resultTextView.text = cardsArray[0].resultText
-        deLeraarTextView.text = cardsArray[0].teacherText.replacingOccurrences(of: "#", with: "\n∙")
-        reflectievragenTextView.text = cardsArray[0].questionText.replacingOccurrences(of: "#", with: "\n∙")
+        print("🇬🇲")
+        print(selectedCard)
+        for card in cardsArray {
+            if (card.title == selectedCard && card.level.lowercased() == "startbekwaam") {
+                resultTextView.text = card.resultText
+                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+            }
+        }
     }
     
     func setBekwaamCardText() {
         navigationItem.title = "Bekwaam"
         startbekwaamButton.tintColor = Constants.purpleblue
         bekwaamButton.tintColor = UIColor.black
-        resultTextView.text = cardsArray[1].resultText
-        deLeraarTextView.text = cardsArray[1].teacherText.replacingOccurrences(of: "#", with: "\n∙")
-        reflectievragenTextView.text = cardsArray[1].questionText.replacingOccurrences(of: "#", with: "\n∙")
+        
+        for card in cardsArray {
+            if (card.title == selectedCard && card.level.lowercased() == "bekwaam") {
+                resultTextView.text = card.resultText
+                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+            }
+        }
+    
     }
     
     func setupReferences() {

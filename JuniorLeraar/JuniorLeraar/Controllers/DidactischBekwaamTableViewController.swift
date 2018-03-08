@@ -17,6 +17,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
     var startbekwaamCards = [Card]()
     var tableHeaders = [String]()
     var tableValues = [[String]]()
+    var selectedCard: String!
     
     var groupA = [String]()
     var groupB = [String]()
@@ -41,10 +42,6 @@ class DidactischBekwaamTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = Constants.purpleblue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-//        navigationController?.navigationItem.backBarButtonItem = Cons
-//        tableView.backgroundColor = Constants.purpleblue50
-//        self.tableView.backgroundColor = Constants.lightblue20
-        
     }
     
     func setupReferences() {
@@ -139,7 +136,15 @@ class DidactischBekwaamTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCard = tableValues[indexPath.section][indexPath.row]
         performSegue(withIdentifier: "openCompetenceCard", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "openCompetenceCard") {
+            let yourNextViewController = segue.destination as! CardViewController
+            yourNextViewController.selectedCard = selectedCard
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
