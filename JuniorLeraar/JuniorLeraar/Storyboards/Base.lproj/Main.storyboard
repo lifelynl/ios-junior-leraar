@@ -28,8 +28,37 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="juniorleraar-logo" translatesAutoresizingMaskIntoConstraints="NO" id="EYW-8A-BtA">
                                 <rect key="frame" x="33.5" y="184" width="308" height="151"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuO-zN-Ltz">
-                                <rect key="frame" x="0.0" y="457" width="375" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjU-27-0Xp">
+                                <rect key="frame" x="0.0" y="527" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.65490196078431373" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Pedagogisch Bekwaam">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vj4-Qq-oee" kind="show" id="tua-c8-yjB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-Ex-rqS">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Collegiale Samenwerking">
+                                    <color key="titleColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Md-f1-6fo" kind="show" id="mqR-go-lWN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbM-dP-8QF" userLabel="Info Button">
+                                <rect key="frame" x="343" y="74" width="22" height="22"/>
+                                <color key="tintColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="5Sa-nj-xnE" kind="show" id="tfl-Oz-5eh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuO-zN-Ltz">
+                                <rect key="frame" x="0.0" y="459" width="375" height="70"/>
                                 <color key="backgroundColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="wwF-FY-nyd"/>
@@ -42,56 +71,27 @@
                                     <segue destination="EYk-1w-oQe" kind="show" id="c66-z6-RBG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-Ex-rqS">
-                                <rect key="frame" x="0.0" y="527" width="375" height="70"/>
-                                <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Collegiale Samenwerking">
-                                    <color key="titleColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9Md-f1-6fo" kind="show" id="mqR-go-lWN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjU-27-0Xp">
-                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
-                                <color key="backgroundColor" red="0.0" green="0.65490196078431373" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Pedagogisch Bekwaam">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vj4-Qq-oee" kind="show" id="tua-c8-yjB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbM-dP-8QF" userLabel="Info Button">
-                                <rect key="frame" x="343" y="74" width="22" height="22"/>
-                                <color key="tintColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <segue destination="5Sa-nj-xnE" kind="show" id="tfl-Oz-5eh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="top" secondItem="pjU-27-0Xp" secondAttribute="bottom" id="07X-P8-owe"/>
                             <constraint firstItem="EYW-8A-BtA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="120" id="2jQ-Sv-zht"/>
+                            <constraint firstItem="pjU-27-0Xp" firstAttribute="top" secondItem="TuO-zN-Ltz" secondAttribute="bottom" id="4Rn-hN-Nim"/>
                             <constraint firstItem="TuO-zN-Ltz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="62g-Y1-Lob"/>
-                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CER-Z5-4nS"/>
+                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="76I-tk-oKO"/>
                             <constraint firstItem="Vcc-1z-qXk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="DPA-R4-Km3"/>
                             <constraint firstItem="wbM-dP-8QF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ENi-Id-GbG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pjU-27-0Xp" secondAttribute="bottom" id="HEl-cf-eBM"/>
-                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JWR-4U-FNG"/>
-                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="top" secondItem="TuO-zN-Ltz" secondAttribute="bottom" id="O1q-NL-76x"/>
-                            <constraint firstItem="pjU-27-0Xp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OsO-uk-6W9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pjU-27-0Xp" secondAttribute="trailing" id="LVM-Dc-FEv"/>
+                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MzV-vw-ORL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TuO-zN-Ltz" secondAttribute="trailing" id="QCs-Lq-Y2f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wbM-dP-8QF" secondAttribute="trailing" constant="10" id="QEX-Ih-qPY"/>
-                            <constraint firstItem="pjU-27-0Xp" firstAttribute="top" secondItem="Qfx-Ex-rqS" secondAttribute="bottom" id="Tku-1c-sra"/>
+                            <constraint firstItem="pjU-27-0Xp" firstAttribute="height" secondItem="TuO-zN-Ltz" secondAttribute="height" id="S3V-sx-ye2"/>
+                            <constraint firstItem="pjU-27-0Xp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YZ2-Rj-YQN"/>
                             <constraint firstItem="EYW-8A-BtA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c2i-3H-K8O"/>
                             <constraint firstItem="Vcc-1z-qXk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hf0-SF-LHG"/>
-                            <constraint firstItem="pjU-27-0Xp" firstAttribute="height" secondItem="TuO-zN-Ltz" secondAttribute="height" id="knV-QS-nZZ"/>
                             <constraint firstItem="Vcc-1z-qXk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lir-dt-61d"/>
-                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="height" secondItem="TuO-zN-Ltz" secondAttribute="height" id="u8T-c4-zcP"/>
-                            <constraint firstItem="pjU-27-0Xp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wyb-9a-6yI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qfx-Ex-rqS" secondAttribute="trailing" id="sJF-Eh-ZJ5"/>
+                            <constraint firstItem="Qfx-Ex-rqS" firstAttribute="height" secondItem="TuO-zN-Ltz" secondAttribute="height" id="wK4-gB-Bep"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
