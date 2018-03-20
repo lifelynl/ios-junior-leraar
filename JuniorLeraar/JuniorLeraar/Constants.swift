@@ -34,6 +34,15 @@ struct Constants {
     
     //      PRAGMA MARK: Firebase
     static func getRootRef() -> DatabaseReference { return Database.database().reference(withPath: firebaseCardsTable) }
-    
     static let firebaseCardsTable = "Dialoguecard"
+    
+    //      PRAGMA MARK: Strings
+    static let themeD = "Didactisch Bekwaam"
+    static let themeC = "Collegiale Samenwerking"
+    static let themeP = "Pedagogisch Bekwaam"
+    static let levelS = "Startbekwaam"
+    static let levelB = "Bekwaam"
+    
+    //      PRAGMA MARK: Seque Identifiers
+    static let openCompetenceCard = "openCompetenceCard"
 }

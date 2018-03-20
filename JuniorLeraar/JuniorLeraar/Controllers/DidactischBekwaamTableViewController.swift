@@ -38,7 +38,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
     }
     
     func setupStyling() {
-        navigationItem.title = "Didactisch Bekwaam"
+        navigationItem.title = Constants.themeD
         navigationController?.navigationBar.barTintColor = Constants.purpleblue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
@@ -67,7 +67,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
     func getCards() {
         var count = 0
         for card in cardsArray {
-            if (card.level.lowercased() == "startbekwaam" && card.theme.lowercased() == "didactisch bekwaam") {
+            if (card.level.lowercased() == Constants.levelS.lowercased() && card.theme.lowercased() == Constants.themeD.lowercased()) {
                 startbekwaamCards.append(card)
                 count = count + 1
             }
@@ -137,11 +137,11 @@ class DidactischBekwaamTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCard = tableValues[indexPath.section][indexPath.row]
-        performSegue(withIdentifier: "openCompetenceCard", sender: self)
+        performSegue(withIdentifier: Constants.openCompetenceCard, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "openCompetenceCard") {
+        if(segue.identifier == Constants.openCompetenceCard) {
             let yourNextViewController = segue.destination as! CardViewController
             yourNextViewController.selectedCard = selectedCard
         }

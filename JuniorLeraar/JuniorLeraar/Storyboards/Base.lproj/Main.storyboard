@@ -64,6 +64,13 @@
                                     <segue destination="vj4-Qq-oee" kind="show" id="tua-c8-yjB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbM-dP-8QF" userLabel="Info Button">
+                                <rect key="frame" x="343" y="74" width="22" height="22"/>
+                                <color key="tintColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="5Sa-nj-xnE" kind="show" id="tfl-Oz-5eh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,11 +78,13 @@
                             <constraint firstItem="TuO-zN-Ltz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="62g-Y1-Lob"/>
                             <constraint firstItem="Qfx-Ex-rqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CER-Z5-4nS"/>
                             <constraint firstItem="Vcc-1z-qXk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="DPA-R4-Km3"/>
+                            <constraint firstItem="wbM-dP-8QF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ENi-Id-GbG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pjU-27-0Xp" secondAttribute="bottom" id="HEl-cf-eBM"/>
                             <constraint firstItem="Qfx-Ex-rqS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JWR-4U-FNG"/>
                             <constraint firstItem="Qfx-Ex-rqS" firstAttribute="top" secondItem="TuO-zN-Ltz" secondAttribute="bottom" id="O1q-NL-76x"/>
                             <constraint firstItem="pjU-27-0Xp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OsO-uk-6W9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TuO-zN-Ltz" secondAttribute="trailing" id="QCs-Lq-Y2f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wbM-dP-8QF" secondAttribute="trailing" constant="10" id="QEX-Ih-qPY"/>
                             <constraint firstItem="pjU-27-0Xp" firstAttribute="top" secondItem="Qfx-Ex-rqS" secondAttribute="bottom" id="Tku-1c-sra"/>
                             <constraint firstItem="EYW-8A-BtA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c2i-3H-K8O"/>
                             <constraint firstItem="Vcc-1z-qXk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hf0-SF-LHG"/>
@@ -95,7 +104,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="89"/>
+            <point key="canvasLocation" x="952.79999999999995" y="88.605697151424295"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="xKR-v2-lnM">
+            <objects>
+                <viewController id="5Sa-nj-xnE" customClass="InfoViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5e4-4W-N7L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9P7-44-yGL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmN-4L-8aX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1143.5"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-1g-VaL">
+                                                <rect key="frame" x="8" y="8" width="359" height="1135.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <mutableString key="text">Dialoogkaarten Junior Leraar
+
+De Junior Leraar app is bedoeld om de ontwikkeling van startende leraren te ondersteunen.
+
+De app bevat de Dialoogkaarten die ontwikkeld zijn binnen het project Junior Leraar van de HvA en kan gebruikt worden als reflectie-instrument en als handvat tijdens begeleidingsgesprekken tussen een startende leraar en een begeleider, of tussen een student-in-opleiding en een begeleider.
+
+De basis van de app zijn 23 bekwaamheden voor startende leraren. Die bekwaamheden zijn geordend rond drie domeinen: pedagogisch bekwaam, didactisch bekwaam en collegiale samenwerking.
+
+Elke bekwaamheid is op twee niveaus uitgewerkt:
+
+· op het niveau startbekwaam leraarschap (voor gebruik tijdens de opleiding en in het eerste jaar na de opleiding).
+
+· op het niveau bekwaam leraarschap (voor gebruik in de eerste drie jaar van het leraarschap).
+
+Per bekwaamheid bevat het scherm drie elementen:
+
+1. het beoogde resultaat beschreven. Voor het niveau startbekwaam is het resultaat gericht op het handelen van de leraar, voor het niveau bekwaam is het resultaat gericht op het handelen van de leerling.
+
+2. Vervolgens worden indicatoren genoemd die bij kunnen dragen aan het beoogde resultaat. De indicatoren beschrijven het zichtbare handelen en het resultaat van dat handelen. Deze indicatoren zijn voorbeelden van handelen van de leraar. In de bekwaamheidsbeschrijvingen is geen onderscheid gemaakt naar onderwijstype, schoolvak of onderwijskundige visie van de school. Bij het gebruik van de kaarten kunnen starters en begeleiders indien gewenst eigen passende kleuring aan de indicatoren geven.
+
+3. Tenslotte volgt een aantal reflectievragen. De coach kan deze vragen gebruiken bij het reflectiegesprek. De reflectievragen geven de mogelijkheid om stil te staan bij en het gesprek te voeren over de onderliggende kennis, opvattingen, overtuigingen of identiteit. De reflectievragen nodigen op deze wijze uit tot een open dialoog. De reflectievragen zijn bedoeld als suggestie voor deze dialoog en kunnen aangevuld worden met eigen vragen die aansluiten bij de situatie en ontwikkelvragen van de starter.
+
+De app is bedoeld voor startende leraren, leraren in opleiding en hun coaches/begeleiders, zowel in het basisonderwijs als het voortgezet onderwijs. Meer informatie is te vinden op www.hva.nl/juniorleraar.
+
+© Hogeschool van Amsterdam
+Postbus 1025
+1000 BA Amsterdam
+020- 595 1400
+servicedesk-ict@hva.nl</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="MRz-1g-VaL" firstAttribute="leading" secondItem="YmN-4L-8aX" secondAttribute="leading" constant="8" id="2Gp-Sc-UAm"/>
+                                            <constraint firstItem="MRz-1g-VaL" firstAttribute="top" secondItem="YmN-4L-8aX" secondAttribute="top" constant="8" id="2WV-pY-wDx"/>
+                                            <constraint firstAttribute="bottom" secondItem="MRz-1g-VaL" secondAttribute="bottom" id="9jf-bP-gMj"/>
+                                            <constraint firstAttribute="trailing" secondItem="MRz-1g-VaL" secondAttribute="trailing" constant="8" id="wZr-bw-zFg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YmN-4L-8aX" secondAttribute="bottom" id="R9I-A7-FfT"/>
+                                    <constraint firstAttribute="trailing" secondItem="YmN-4L-8aX" secondAttribute="trailing" id="evs-A2-8Fo"/>
+                                    <constraint firstItem="YmN-4L-8aX" firstAttribute="leading" secondItem="9P7-44-yGL" secondAttribute="leading" id="gN0-xS-AOT"/>
+                                    <constraint firstItem="YmN-4L-8aX" firstAttribute="top" secondItem="9P7-44-yGL" secondAttribute="top" id="uzn-1a-Fr7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9P7-44-yGL" firstAttribute="top" secondItem="vLl-wR-t0d" secondAttribute="top" id="4Tn-6Q-Jgx"/>
+                            <constraint firstItem="YmN-4L-8aX" firstAttribute="width" secondItem="5e4-4W-N7L" secondAttribute="width" id="72t-Q8-hos"/>
+                            <constraint firstItem="9P7-44-yGL" firstAttribute="leading" secondItem="vLl-wR-t0d" secondAttribute="leading" id="RT2-UQ-aKx"/>
+                            <constraint firstItem="9P7-44-yGL" firstAttribute="trailing" secondItem="vLl-wR-t0d" secondAttribute="trailing" id="tEm-Yi-ouA"/>
+                            <constraint firstItem="9P7-44-yGL" firstAttribute="bottom" secondItem="vLl-wR-t0d" secondAttribute="bottom" id="vft-iF-QdI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vLl-wR-t0d"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZ4-0S-Uve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="-801"/>
         </scene>
         <!--Pedagogisch Bekwaam Table View Controller-->
         <scene sceneID="Ueu-H8-ULw">
@@ -202,7 +294,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBK-UR-cyQ">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="cardToolbar" translatesAutoresizingMaskIntoConstraints="NO" id="pBK-UR-cyQ">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="2hm-hr-kz2"/>
@@ -328,6 +420,7 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                     </view>
                     <connections>
                         <outlet property="bekwaamButton" destination="Hq2-cb-Hme" id="ytm-53-HDd"/>
+                        <outlet property="cardToolbar" destination="pBK-UR-cyQ" id="Wf0-iB-iwD"/>
                         <outlet property="deLeraarTextView" destination="fOj-DZ-EoB" id="lCj-Cw-axg"/>
                         <outlet property="reflectievragenTextView" destination="IZ8-Og-Ygh" id="Qp7-nt-c10"/>
                         <outlet property="resultTextView" destination="BSB-yo-oc1" id="vfY-rt-H4T"/>
@@ -365,6 +458,6 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
         <image name="juniorleraar-logo" width="308" height="151"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oej-yP-Koz"/>
+        <segue reference="IeJ-vq-haw"/>
     </inferredMetricsTieBreakers>
 </document>

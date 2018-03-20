@@ -17,20 +17,33 @@ class CardViewController: UIViewController {
     
     @IBOutlet weak var bekwaamButton: UIBarButtonItem!
     @IBOutlet weak var startbekwaamButton: UIBarButtonItem!
+    @IBOutlet weak var cardToolbar: UIToolbar!
     private var dialoguecardRef: DatabaseReference?
     var cardsArray = [Card]()
     var selectedCard = ""
+    var currentTheme: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupReferences()
         observeCards()
     }
+    
+    func findCurrentTheme() {
+        for card in cardsArray {
+            if (card.title == selectedCard) {
+                currentTheme = card.theme
+                if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
+                    cardToolbar.barTintColor = Constants.purpleblue
+                } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
+                    cardToolbar.barTintColor = Constants.yellow
+                } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
+                    cardToolbar.barTintColor = Constants.lightblue
+                }
+            }
+        }
+    }
 
-//    func selectedCard(title: String) {
-//        print(title)
-//        return selectedCard = title
-//    }
     @IBAction func startbekwaamButton(_ sender: Any) {
         setStartbekwaamCardText()
     }
@@ -40,13 +53,19 @@ class CardViewController: UIViewController {
     }
     
     func setStartbekwaamCardText() {
-        navigationItem.title = "Startbekwaam"
-        bekwaamButton.tintColor = Constants.purpleblue
-        startbekwaamButton.tintColor = UIColor.black
-        print("🇬🇲")
-        print(selectedCard)
+        navigationItem.title = Constants.levelS
+        if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
+            bekwaamButton.tintColor = UIColor.white
+            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+        } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
+            bekwaamButton.tintColor = Constants.purpleblue
+            startbekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
+        } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
+            bekwaamButton.tintColor = UIColor.white
+            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+        }
         for card in cardsArray {
-            if (card.title == selectedCard && card.level.lowercased() == "startbekwaam") {
+            if (card.title == selectedCard && card.level.lowercased() == Constants.levelS.lowercased()) {
                 resultTextView.text = card.resultText
                 deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
                 reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
@@ -55,12 +74,19 @@ class CardViewController: UIViewController {
     }
     
     func setBekwaamCardText() {
-        navigationItem.title = "Bekwaam"
-        startbekwaamButton.tintColor = Constants.purpleblue
-        bekwaamButton.tintColor = UIColor.black
-        
+        navigationItem.title = Constants.levelB
+        if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
+            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = UIColor.white
+        } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
+            bekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = Constants.purpleblue
+        } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
+            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = UIColor.white
+        }
         for card in cardsArray {
-            if (card.title == selectedCard && card.level.lowercased() == "bekwaam") {
+            if (card.title == selectedCard && card.level.lowercased() == Constants.levelB.lowercased()) {
                 resultTextView.text = card.resultText
                 deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
                 reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
@@ -84,6 +110,7 @@ class CardViewController: UIViewController {
                 }
             }
             self.setStartbekwaamCardText()
+            self.findCurrentTheme()
         })
     }
 }
