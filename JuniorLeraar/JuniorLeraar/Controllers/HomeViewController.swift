@@ -22,9 +22,6 @@ class HomeViewController: UIViewController {
         collegialeSamenwerkingButton.tintColor = Constants.purpleblue
         pedagogischBekwaamButton.backgroundColor = Constants.lightblue
         pedagogischBekwaamButton.tintColor = UIColor.white
-        if let text = Bundle.main.infoDictionary?["CFBundleVersion"]  as? String {
-            print(text + "🇭🇷")
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

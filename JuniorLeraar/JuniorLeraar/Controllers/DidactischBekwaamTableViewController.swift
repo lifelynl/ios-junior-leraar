@@ -51,6 +51,10 @@ class DidactischBekwaamTableViewController: UITableViewController {
     }
     
     func observeCards() {
+        cardsArray.removeAll()
+        startbekwaamCards.removeAll()
+        tableHeaders.removeAll()
+        tableValues.removeAll()
         dialoguecardRef?.observe(.value, with: { snapshot in
             for item in snapshot.children {
                 if let cardSnapshot = item as? DataSnapshot {
@@ -86,6 +90,12 @@ class DidactischBekwaamTableViewController: UITableViewController {
     }
     
     func getTableValues () {
+        groupA.removeAll()
+        groupB.removeAll()
+        groupC.removeAll()
+        groupD.removeAll()
+        groupE.removeAll()
+        groupF.removeAll()
         for card in startbekwaamCards {
             if (card.competence == tableHeaders[0]) {
                 groupA.append(card.title)
@@ -131,6 +141,9 @@ class DidactischBekwaamTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
+//        print(indexPath.section)
+//        print("🇬🇲")
+//        print(indexPath.row)
         cell.textLabel?.text = tableValues[indexPath.section][indexPath.row]
         return cell
     }

@@ -45,4 +45,6 @@ struct Constants {
     
     //      PRAGMA MARK: Seque Identifiers
     static let openCompetenceCard = "openCompetenceCard"
+    static let openCompetenceCardPB = "openCompetenceCardPedagogischBekwaam"
+    static let openCompetenceCardCS = "openCompetenceCardCollegialeSamenwerking"
 }

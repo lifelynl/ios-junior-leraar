@@ -28,7 +28,7 @@ class PedagogischBekwaamTableViewController: UITableViewController {
     }
     
     func setupStyling() {
-        navigationItem.title = "Pedagogisch Bekwaam"
+        navigationItem.title = Constants.themeP
         navigationController?.navigationBar.barTintColor = Constants.lightblue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
@@ -56,7 +56,7 @@ class PedagogischBekwaamTableViewController: UITableViewController {
     func getCards() {
         var count = 0
         for card in cardsArray {
-            if (card.level.lowercased() == "startbekwaam" && card.theme.lowercased() == "pedagogisch bekwaam") {
+            if (card.level.lowercased() == Constants.levelS.lowercased() && card.theme.lowercased() == Constants.themeP.lowercased()) {
                 startbekwaamCards.append(card)
                 count = count + 1
             }
@@ -72,17 +72,18 @@ class PedagogischBekwaamTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = startbekwaamCards[indexPath.row].title
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCard = startbekwaamCards[indexPath.row].title
-        performSegue(withIdentifier: "openCompetenceCardPedagogischBekwaam", sender: self)
+        performSegue(withIdentifier: Constants.openCompetenceCardPB, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "openCompetenceCardPedagogischBekwaam") {
+        if(segue.identifier == Constants.openCompetenceCardPB) {
             let yourNextViewController = segue.destination as! CardViewController
             yourNextViewController.selectedCard = selectedCard
         }

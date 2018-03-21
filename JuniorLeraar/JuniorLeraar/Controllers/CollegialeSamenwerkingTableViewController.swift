@@ -28,7 +28,7 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
     }
     
     func setupStyling() {
-        navigationItem.title = "Collegiale Samenwerking"
+        navigationItem.title = Constants.themeC
         navigationController?.navigationBar.barTintColor = Constants.yellow
         navigationController?.navigationBar.tintColor = Constants.purpleblue
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: Constants.purpleblue]
@@ -56,7 +56,7 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
     func getCards() {
         var count = 0
         for card in cardsArray {
-            if (card.level.lowercased() == "startbekwaam" && card.theme.lowercased() == "collegiale samenwerking") {
+            if (card.level.lowercased() == Constants.levelS.lowercased() && card.theme.lowercased() == Constants.themeC.lowercased()) {
                 startbekwaamCards.append(card)
                 count = count + 1
             }
@@ -72,17 +72,18 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = startbekwaamCards[indexPath.row].title
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCard = startbekwaamCards[indexPath.row].title
-        performSegue(withIdentifier: "openCompetenceCardCollegialeSamenwerking", sender: self)
+        performSegue(withIdentifier: Constants.openCompetenceCardCS, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "openCompetenceCardCollegialeSamenwerking") {
+        if(segue.identifier == Constants.openCompetenceCardCS) {
             let yourNextViewController = segue.destination as! CardViewController
             yourNextViewController.selectedCard = selectedCard
         }
