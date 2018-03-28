@@ -43,6 +43,7 @@ class PedagogischBekwaamTableViewController: UITableViewController {
     
     func observeCards() {
         dialoguecardRef?.observe(.value, with: { snapshot in
+            self.cardsArray.removeAll()
             for item in snapshot.children {
                 if let cardSnapshot = item as? DataSnapshot {
                     let card = Card(snapshot: cardSnapshot)
@@ -55,6 +56,7 @@ class PedagogischBekwaamTableViewController: UITableViewController {
     
     func getCards() {
         var count = 0
+        startbekwaamCards.removeAll()
         for card in cardsArray {
             if (card.level.lowercased() == Constants.levelS.lowercased() && card.theme.lowercased() == Constants.themeP.lowercased()) {
                 startbekwaamCards.append(card)
@@ -86,6 +88,10 @@ class PedagogischBekwaamTableViewController: UITableViewController {
         if(segue.identifier == Constants.openCompetenceCardPB) {
             let yourNextViewController = segue.destination as! CardViewController
             yourNextViewController.selectedCard = selectedCard
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
         }
     }
 }

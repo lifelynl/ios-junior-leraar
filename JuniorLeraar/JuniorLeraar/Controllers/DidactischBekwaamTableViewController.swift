@@ -51,11 +51,8 @@ class DidactischBekwaamTableViewController: UITableViewController {
     }
     
     func observeCards() {
-        cardsArray.removeAll()
-        startbekwaamCards.removeAll()
-        tableHeaders.removeAll()
-        tableValues.removeAll()
         dialoguecardRef?.observe(.value, with: { snapshot in
+            self.cardsArray.removeAll()
             for item in snapshot.children {
                 if let cardSnapshot = item as? DataSnapshot {
                     let card = Card(snapshot: cardSnapshot)
@@ -70,6 +67,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
     
     func getCards() {
         var count = 0
+        startbekwaamCards.removeAll()
         for card in cardsArray {
             if (card.level.lowercased() == Constants.levelS.lowercased() && card.theme.lowercased() == Constants.themeD.lowercased()) {
                 startbekwaamCards.append(card)
@@ -80,6 +78,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
     }
     
     func getTableHeaders() {
+        tableHeaders.removeAll()
         for card in startbekwaamCards {
             let competence = card.competence
             if (tableHeaders.contains(competence) == false) {
@@ -90,6 +89,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
     }
     
     func getTableValues () {
+        tableValues.removeAll()
         groupA.removeAll()
         groupB.removeAll()
         groupC.removeAll()
@@ -157,6 +157,10 @@ class DidactischBekwaamTableViewController: UITableViewController {
         if(segue.identifier == Constants.openCompetenceCard) {
             let yourNextViewController = segue.destination as! CardViewController
             yourNextViewController.selectedCard = selectedCard
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
         }
     }
     

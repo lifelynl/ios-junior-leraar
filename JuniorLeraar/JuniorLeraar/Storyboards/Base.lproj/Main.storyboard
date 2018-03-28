@@ -118,12 +118,21 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmN-4L-8aX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1143.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1178.5"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-1g-VaL">
-                                                <rect key="frame" x="8" y="8" width="359" height="1135.5"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Version: 1.5.3" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-lo-kU0" userLabel="VersionTextView">
+                                                <rect key="frame" x="8" y="8" width="359" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <mutableString key="text">Dialoogkaarten Junior Leraar
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="cMz-8b-rLf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-1g-VaL">
+                                                <rect key="frame" x="8" y="43" width="359" height="1135.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Dialoogkaarten Junior Leraar
 
 De Junior Leraar app is bedoeld om de ontwikkeling van startende leraren te ondersteunen.
 
@@ -151,7 +160,7 @@ De app is bedoeld voor startende leraren, leraren in opleiding en hun coaches/be
 Postbus 1025
 1000 BA Amsterdam
 020- 595 1400
-servicedesk-ict@hva.nl</mutableString>
+servicedesk-ict@hva.nl</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -159,8 +168,11 @@ servicedesk-ict@hva.nl</mutableString>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="MRz-1g-VaL" firstAttribute="leading" secondItem="YmN-4L-8aX" secondAttribute="leading" constant="8" id="2Gp-Sc-UAm"/>
-                                            <constraint firstItem="MRz-1g-VaL" firstAttribute="top" secondItem="YmN-4L-8aX" secondAttribute="top" constant="8" id="2WV-pY-wDx"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="MvU-lo-kU0" secondAttribute="trailing" id="7Od-pz-OFh"/>
                                             <constraint firstAttribute="bottom" secondItem="MRz-1g-VaL" secondAttribute="bottom" id="9jf-bP-gMj"/>
+                                            <constraint firstItem="MRz-1g-VaL" firstAttribute="top" secondItem="MvU-lo-kU0" secondAttribute="bottom" id="T6T-B4-GFI"/>
+                                            <constraint firstItem="MvU-lo-kU0" firstAttribute="leading" secondItem="YmN-4L-8aX" secondAttribute="leadingMargin" id="fU0-bz-vxQ"/>
+                                            <constraint firstItem="MvU-lo-kU0" firstAttribute="top" secondItem="YmN-4L-8aX" secondAttribute="topMargin" id="uYL-Qs-G1A"/>
                                             <constraint firstAttribute="trailing" secondItem="MRz-1g-VaL" secondAttribute="trailing" constant="8" id="wZr-bw-zFg"/>
                                         </constraints>
                                     </view>
@@ -184,10 +196,13 @@ servicedesk-ict@hva.nl</mutableString>
                         <viewLayoutGuide key="safeArea" id="vLl-wR-t0d"/>
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="versionTextView" destination="MvU-lo-kU0" id="OfV-jh-iPg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZ4-0S-Uve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="-801"/>
+            <point key="canvasLocation" x="953" y="-1052"/>
         </scene>
         <!--Pedagogisch Bekwaam Table View Controller-->
         <scene sceneID="Ueu-H8-ULw">

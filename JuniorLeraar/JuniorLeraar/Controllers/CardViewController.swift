@@ -27,6 +27,11 @@ class CardViewController: UIViewController {
         super.viewDidLoad()
         setupReferences()
         observeCards()
+        setupStyling()
+    }
+    
+    func setupStyling() {
+        navigationItem.title = Constants.levelS
     }
     
     func findCurrentTheme() {
