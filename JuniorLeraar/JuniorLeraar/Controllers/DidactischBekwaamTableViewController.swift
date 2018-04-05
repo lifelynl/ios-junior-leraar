@@ -141,9 +141,6 @@ class DidactischBekwaamTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
-//        print(indexPath.section)
-//        print("🇬🇲")
-//        print(indexPath.row)
         cell.textLabel?.text = tableValues[indexPath.section][indexPath.row]
         return cell
     }
@@ -159,7 +156,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
             yourNextViewController.selectedCard = selectedCard
             
             let backItem = UIBarButtonItem()
-            backItem.title = "Back"
+            backItem.title = Constants.back
             navigationItem.backBarButtonItem = backItem
         }
     }

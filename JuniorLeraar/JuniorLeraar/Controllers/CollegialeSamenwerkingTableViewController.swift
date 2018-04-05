@@ -90,7 +90,7 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
             yourNextViewController.selectedCard = selectedCard
             
             let backItem = UIBarButtonItem()
-            backItem.title = "Back"
+            backItem.title = Constants.back
             navigationItem.backBarButtonItem = backItem
         }
     }
