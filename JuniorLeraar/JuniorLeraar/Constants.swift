@@ -42,7 +42,7 @@ struct Constants {
     static let themeP = "Pedagogisch Bekwaam"
     static let levelS = "Startbekwaam"
     static let levelB = "Bekwaam"
-    
+    static let back = "Back"
     //      PRAGMA MARK: Seque Identifiers
     static let openCompetenceCard = "openCompetenceCard"
     static let openCompetenceCardPB = "openCompetenceCardPedagogischBekwaam"
