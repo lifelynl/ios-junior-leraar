@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collegialeSamenwerkingButton: UIButton!
     @IBOutlet weak var pedagogischBekwaamButton: UIButton!
     
+    @IBOutlet var buttontje: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         didactischBekwaamButton.backgroundColor = Constants.purpleblue
@@ -24,12 +26,27 @@ class HomeViewController: UIViewController {
         pedagogischBekwaamButton.tintColor = UIColor.white
     }
     
+    @IBAction func searchButtonClicked(_ sender: Any) {
+        didTapSearch()
+    }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    /*
+     * For triggering the search functionality
+     */
+    func didTapSearch() {
+        let searchViewController = storyboard?.instantiateViewController(withIdentifier: "searchViewController")
+        let navigationController = UINavigationController(rootViewController: searchViewController!)
+        navigationController.setViewControllers([searchViewController!], animated: false)
+        navigationController.modalTransitionStyle = .crossDissolve
+        navigationController.modalPresentationStyle = .overCurrentContext
+        self.present(navigationController, animated: true, completion: nil)
     }
 
 }
