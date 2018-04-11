@@ -94,5 +94,16 @@ class PedagogischBekwaamTableViewController: UITableViewController {
             navigationItem.backBarButtonItem = backItem
         }
     }
+    
+//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+//        footerView.backgroundColor = UIColor.blue
+//        return footerView
+//    }
+//    
+//    // set height for footer
+//    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 300
+//    }
 }
 

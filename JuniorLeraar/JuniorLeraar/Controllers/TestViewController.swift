@@ -1,16 +1,15 @@
 //
-//  CompetenceTableViewController.swift
+//  TestViewController.swift
 //  JuniorLeraar
 //
-//  Created by Jasper Zwiers on 15-02-18.
+//  Created by Jasper Zwiers on 06-04-18.
 //  Copyright © 2018 Jasper Zwiers. All rights reserved.
 //
 
 import UIKit
-import FirebaseDatabase
-import Foundation
+import Firebase
 
-class DidactischBekwaamTableViewController: UITableViewController {
+class TestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     private var dialoguecardRef: DatabaseReference?
     var cardsArray = [Card]()
@@ -19,21 +18,23 @@ class DidactischBekwaamTableViewController: UITableViewController {
     var tableValues = [[String]]()
     var selectedCard: String!
     
+    @IBOutlet weak var tableView: UITableView!
     var groupA = [String]()
     var groupB = [String]()
     var groupC = [String]()
     var groupD = [String]()
     var groupE = [String]()
     var groupF = [String]()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupReferences()
         setupStyling()
+        tableView.delegate = self
         tableView.dataSource = self
     }
-
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = Constants.purpleblue20
     }
     
@@ -62,7 +63,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
             self.getCards()
         })
     }
-
+    
     // MARK: - Table view data source
     
     func getCards() {
@@ -119,8 +120,8 @@ class DidactischBekwaamTableViewController: UITableViewController {
         tableValues.append(groupF)
         self.tableView.reloadData()
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0) {
             return groupA.count
         } else if (section == 1) {
@@ -137,15 +138,15 @@ class DidactischBekwaamTableViewController: UITableViewController {
             return 0
         }
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = tableValues[indexPath.section][indexPath.row]
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCard = tableValues[indexPath.section][indexPath.row]
         performSegue(withIdentifier: Constants.openCompetenceCard, sender: self)
     }
@@ -161,15 +162,12 @@ class DidactischBekwaamTableViewController: UITableViewController {
         }
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return tableHeaders.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return tableHeaders[section]
     }
-    
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
-        view.tintColor = Constants.purpleblue50
-    }
+
 }

@@ -12,6 +12,7 @@
 		A48E57A92050070F007822AD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57A82050070F007822AD /* CardViewController.swift */; };
 		A48E57AB2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */; };
 		A48E57AD20512A5B007822AD /* PedagogischBekwaamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */; };
+		A4B0A6D5207760920001C246 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0A6D4207760920001C246 /* TestViewController.swift */; };
 		A4D5A579203710B60068BD57 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5A578203710B60068BD57 /* Card.swift */; };
 		A4E4BAD220357D39005212A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD120357D39005212A3 /* AppDelegate.swift */; };
 		A4E4BAD420357D39005212A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD320357D39005212A3 /* HomeViewController.swift */; };
@@ -32,6 +33,7 @@
 		A48E57A82050070F007822AD /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegialeSamenwerkingTableViewController.swift; sourceTree = "<group>"; };
 		A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedagogischBekwaamTableViewController.swift; sourceTree = "<group>"; };
+		A4B0A6D4207760920001C246 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A4D5A578203710B60068BD57 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A4E4BACE20357D39005212A3 /* JuniorLeraar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuniorLeraar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4BAD120357D39005212A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */,
 				A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */,
 				A483D5F22061296800E452DF /* InfoViewController.swift */,
+				A4B0A6D4207760920001C246 /* TestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B0A6D5207760920001C246 /* TestViewController.swift in Sources */,
 				A483D5F32061296800E452DF /* InfoViewController.swift in Sources */,
 				A48E57A7204FF1C0007822AD /* Constants.swift in Sources */,
 				A4E4BAEA2035A527005212A3 /* DidactischBekwaamTableViewController.swift in Sources */,
