@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import PopupDialog
 
 class CardViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var startbekwaamButton: UIBarButtonItem!
     @IBOutlet weak var cardToolbar: UIToolbar!
     private var dialoguecardRef: DatabaseReference?
+    private var checkcardRef: DatabaseReference?
     var cardsArray = [Card]()
     var selectedCard = ""
     var currentTheme: String?
@@ -28,22 +30,94 @@ class CardViewController: UIViewController {
         setupReferences()
         observeCards()
         setupStyling()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "check-icon-red"), style: .done, target: self, action: #selector(addTapped))
+//        navigationItem.rightBarButtonItem?.tintColor = UIColor.green
+    }
+    
+    @objc func addTapped() {
+        popupDialog()
+        
+        for card in cardsArray {
+            if (card.title == selectedCard && card.level.lowercased() == Constants.levelS.lowercased()) {
+                let vari = checkcardRef?.child(Constants.DeviceID).childByAutoId()
+                vari?.setValue(card.toAnyObject())
+            }
+        }
     }
     
     func setupStyling() {
         navigationItem.title = Constants.levelS
     }
     
+    func popupDialog() {
+        // Customize dialog appearance
+        let pv = PopupDialogDefaultView.appearance()
+        pv.titleFont    = UIFont(name: "HelveticaNeue-Light", size: 16)!
+        pv.titleColor   = Constants.purpleblue
+        pv.messageFont  = UIFont(name: "HelveticaNeue", size: 14)!
+        pv.messageColor = Constants.purpleblue
+        
+        // Customize the container view appearance
+        let pcv = PopupDialogContainerView.appearance()
+        pcv.backgroundColor = Constants.yellow
+        pcv.cornerRadius    = 10
+        pcv.shadowEnabled   = true
+        pcv.shadowColor     = Constants.yellow
+        
+        // Customize overlay appearance
+        let ov = PopupDialogOverlayView.appearance()
+        ov.blurEnabled     = true
+        ov.blurRadius      = 30
+        ov.liveBlurEnabled = true
+        ov.opacity         = 0.5
+        ov.color           = Constants.yellow
+        
+        // Customize default button appearance
+        let db = DefaultButton.appearance()
+        db.titleFont      = UIFont(name: "HelveticaNeue-Medium", size: 14)!
+        db.titleColor     = Constants.purpleblue
+        db.buttonColor    = Constants.yellow
+        db.separatorColor = Constants.purpleblue
+        
+        // Prepare the popup assets
+        let title = "Kaart Afronden"
+        let message = "Wil jij deze kaart afronden?"
+        let image = UIImage(named: "pexels-photo-103290")
+        
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: message, image: image, buttonAlignment: .horizontal, transitionStyle: .fadeIn)
+        
+        // Create buttons
+        let buttonOne = DefaultButton(title: "Ja") {
+            print("You canceled the car dialog.")
+        }
+        
+        // This button will not the dismiss the dialog
+        let buttonTwo = DefaultButton(title: "Nee") {
+            print("What a beauty!")
+        }
+        
+        // Add buttons to dialog
+        // Alternatively, you can use popup.addButton(buttonOne)
+        // to add a single button
+        popup.addButtons([buttonOne, buttonTwo])
+        
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
+    }
     func findCurrentTheme() {
         for card in cardsArray {
             if (card.title == selectedCard) {
                 currentTheme = card.theme
                 if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
                     cardToolbar.barTintColor = Constants.purpleblue
+                    navigationController?.navigationBar.tintColor = UIColor.white
                 } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
                     cardToolbar.barTintColor = Constants.yellow
+                    navigationController?.navigationBar.tintColor = Constants.purpleblue
                 } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
                     cardToolbar.barTintColor = Constants.lightblue
+                    navigationController?.navigationBar.tintColor = UIColor.white
                 }
             }
         }
@@ -102,6 +176,7 @@ class CardViewController: UIViewController {
     
     func setupReferences() {
         dialoguecardRef = Constants.getRootRef()
+        checkcardRef = Constants.getCheckRef()
         dialoguecardRef?.keepSynced(true)
         observeCards()
     }

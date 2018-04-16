@@ -35,6 +35,8 @@ struct Constants {
     //      PRAGMA MARK: Firebase
     static func getRootRef() -> DatabaseReference { return Database.database().reference(withPath: firebaseCardsTable) }
     static let firebaseCardsTable = "Dialoguecard"
+    static func getCheckRef() -> DatabaseReference { return Database.database().reference(withPath: firebaseCheckTable) }
+    static let firebaseCheckTable = "Check"
     
     //      PRAGMA MARK: Strings
     static let themeD = "Didactisch Bekwaam"
@@ -43,8 +45,12 @@ struct Constants {
     static let levelS = "Startbekwaam"
     static let levelB = "Bekwaam"
     static let back = "Back"
+    
     //      PRAGMA MARK: Seque Identifiers
     static let openCompetenceCard = "openCompetenceCard"
     static let openCompetenceCardPB = "openCompetenceCardPedagogischBekwaam"
     static let openCompetenceCardCS = "openCompetenceCardCollegialeSamenwerking"
+    
+    //      PRAGMA MARK: Random
+    static let DeviceID = UIDevice.current.identifierForVendor!.uuidString
 }
