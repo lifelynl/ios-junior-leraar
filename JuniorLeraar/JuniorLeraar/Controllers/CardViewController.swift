@@ -79,8 +79,8 @@ class CardViewController: UIViewController {
         for card in cardsArray {
             if (card.title == selectedCard && card.level.lowercased() == Constants.levelS.lowercased()) {
                 resultTextView.text = card.resultText
-                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
-                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
             }
         }
     }
@@ -100,8 +100,8 @@ class CardViewController: UIViewController {
         for card in cardsArray {
             if (card.title == selectedCard && card.level.lowercased() == Constants.levelB.lowercased()) {
                 resultTextView.text = card.resultText
-                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
-                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
             }
         }
     

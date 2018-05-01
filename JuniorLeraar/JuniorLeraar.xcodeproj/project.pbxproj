@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41DF2BD208DC26400699ED9 /* JsonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF2BC208DC26400699ED9 /* JsonController.swift */; };
+		A47CDD88208DECE7005935DA /* junior-leraar.json in Resources */ = {isa = PBXBuildFile; fileRef = A47CDD87208DECE7005935DA /* junior-leraar.json */; };
 		A483D5F32061296800E452DF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A483D5F22061296800E452DF /* InfoViewController.swift */; };
 		A48E57A7204FF1C0007822AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57A6204FF1C0007822AD /* Constants.swift */; };
 		A48E57A92050070F007822AD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57A82050070F007822AD /* CardViewController.swift */; };
 		A48E57AB2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */; };
 		A48E57AD20512A5B007822AD /* PedagogischBekwaamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */; };
-		A4D5A579203710B60068BD57 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5A578203710B60068BD57 /* Card.swift */; };
+		A4BC5EAA2098B2FE004B1CE5 /* Kaart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BC5EA92098B2FE004B1CE5 /* Kaart.swift */; };
 		A4E4BAD220357D39005212A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD120357D39005212A3 /* AppDelegate.swift */; };
 		A4E4BAD420357D39005212A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD320357D39005212A3 /* HomeViewController.swift */; };
 		A4E4BAD720357D39005212A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD520357D39005212A3 /* Main.storyboard */; };
 		A4E4BAD920357D39005212A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD820357D39005212A3 /* Assets.xcassets */; };
 		A4E4BADC20357D39005212A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BADA20357D39005212A3 /* LaunchScreen.storyboard */; };
-		A4E4BAE420359247005212A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAE320359247005212A3 /* GoogleService-Info.plist */; };
 		A4E4BAEA2035A527005212A3 /* DidactischBekwaamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAE92035A527005212A3 /* DidactischBekwaamTableViewController.swift */; };
 		EA0242A3CF3C2BAE8A9C32AB /* Pods_JuniorLeraar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */; };
 /* End PBXBuildFile section */
@@ -27,12 +28,14 @@
 		37A28997FF7C4E36CD53EB50 /* Pods-JuniorLeraar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuniorLeraar.release.xcconfig"; path = "Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar.release.xcconfig"; sourceTree = "<group>"; };
 		44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuniorLeraar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		691B53134A140AB439C8AAAE /* Pods-JuniorLeraar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuniorLeraar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar.debug.xcconfig"; sourceTree = "<group>"; };
+		A41DF2BC208DC26400699ED9 /* JsonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonController.swift; sourceTree = "<group>"; };
+		A47CDD87208DECE7005935DA /* junior-leraar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "junior-leraar.json"; path = "../../../../../../Downloads/junior-leraar.json"; sourceTree = "<group>"; };
 		A483D5F22061296800E452DF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A48E57A6204FF1C0007822AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A48E57A82050070F007822AD /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegialeSamenwerkingTableViewController.swift; sourceTree = "<group>"; };
 		A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedagogischBekwaamTableViewController.swift; sourceTree = "<group>"; };
-		A4D5A578203710B60068BD57 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A4BC5EA92098B2FE004B1CE5 /* Kaart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaart.swift; sourceTree = "<group>"; };
 		A4E4BACE20357D39005212A3 /* JuniorLeraar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuniorLeraar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4BAD120357D39005212A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4BAD320357D39005212A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +43,6 @@
 		A4E4BAD820357D39005212A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E4BADB20357D39005212A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4E4BADD20357D39005212A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4E4BAE320359247005212A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4E4BAE92035A527005212A3 /* DidactischBekwaamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidactischBekwaamTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +78,7 @@
 		A4D5A5772037104B0068BD57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A4D5A578203710B60068BD57 /* Card.swift */,
+				A4BC5EA92098B2FE004B1CE5 /* Kaart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,10 +104,10 @@
 		A4E4BAD020357D39005212A3 /* JuniorLeraar */ = {
 			isa = PBXGroup;
 			children = (
+				A47CDD87208DECE7005935DA /* junior-leraar.json */,
 				A4D5A5772037104B0068BD57 /* Models */,
 				A4E4BAE62035A490005212A3 /* Controllers */,
 				A4E4BAE52035A47E005212A3 /* Storyboards */,
-				A4E4BAE320359247005212A3 /* GoogleService-Info.plist */,
 				A4E4BAD120357D39005212A3 /* AppDelegate.swift */,
 				A4E4BAD820357D39005212A3 /* Assets.xcassets */,
 				A4E4BADD20357D39005212A3 /* Info.plist */,
@@ -132,6 +134,7 @@
 				A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */,
 				A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */,
 				A483D5F22061296800E452DF /* InfoViewController.swift */,
+				A41DF2BC208DC26400699ED9 /* JsonController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,8 +150,6 @@
 				A4E4BACA20357D39005212A3 /* Sources */,
 				A4E4BACB20357D39005212A3 /* Frameworks */,
 				A4E4BACC20357D39005212A3 /* Resources */,
-				DCE709AD4DB78E26C2D2F8BA /* [CP] Embed Pods Frameworks */,
-				EE5C5F3D4D7F2359E7647F31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,8 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47CDD88208DECE7005935DA /* junior-leraar.json in Resources */,
 				A4E4BADC20357D39005212A3 /* LaunchScreen.storyboard in Resources */,
-				A4E4BAE420359247005212A3 /* GoogleService-Info.plist in Resources */,
 				A4E4BAD920357D39005212A3 /* Assets.xcassets in Resources */,
 				A4E4BAD720357D39005212A3 /* Main.storyboard in Resources */,
 			);
@@ -226,43 +227,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DCE709AD4DB78E26C2D2F8BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE5C5F3D4D7F2359E7647F31 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -270,15 +234,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41DF2BD208DC26400699ED9 /* JsonController.swift in Sources */,
 				A483D5F32061296800E452DF /* InfoViewController.swift in Sources */,
 				A48E57A7204FF1C0007822AD /* Constants.swift in Sources */,
+				A4BC5EAA2098B2FE004B1CE5 /* Kaart.swift in Sources */,
 				A4E4BAEA2035A527005212A3 /* DidactischBekwaamTableViewController.swift in Sources */,
 				A48E57A92050070F007822AD /* CardViewController.swift in Sources */,
 				A48E57AD20512A5B007822AD /* PedagogischBekwaamTableViewController.swift in Sources */,
 				A48E57AB2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift in Sources */,
 				A4E4BAD420357D39005212A3 /* HomeViewController.swift in Sources */,
 				A4E4BAD220357D39005212A3 /* AppDelegate.swift in Sources */,
-				A4D5A579203710B60068BD57 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
