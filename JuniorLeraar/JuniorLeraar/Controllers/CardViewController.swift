@@ -17,7 +17,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var bekwaamButton: UIBarButtonItem!
     @IBOutlet weak var startbekwaamButton: UIBarButtonItem!
     @IBOutlet weak var cardToolbar: UIToolbar!
-    var cardsArray = [Kaart]()
+    var cardsArray = [Card]()
     var selectedCard = ""
     var currentTheme: String?
     
@@ -25,6 +25,10 @@ class CardViewController: UIViewController {
         super.viewDidLoad()
         getCardsArray()
         setupStyling()
+        
+        resultTextView.accessibilityTraits = UIAccessibilityTraitStaticText
+        deLeraarTextView.accessibilityTraits = UIAccessibilityTraitStaticText
+        reflectievragenTextView.accessibilityTraits = UIAccessibilityTraitStaticText
     }
     
     func setupStyling() {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Kaart: Decodable {
+struct Card: Decodable {
     let competence: String
     let level: String
     let theme: String

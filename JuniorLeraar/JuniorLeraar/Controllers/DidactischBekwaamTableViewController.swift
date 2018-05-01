@@ -11,8 +11,8 @@ import Foundation
 
 class DidactischBekwaamTableViewController: UITableViewController {
 
-    var cardsArray = [Kaart]()
-    var startbekwaamCards = [Kaart]()
+    var cardsArray = [Card]()
+    var startbekwaamCards = [Card]()
     var tableHeaders = [String]()
     var tableValues = [[String]]()
     var selectedCard: String!

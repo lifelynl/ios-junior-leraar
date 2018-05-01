@@ -10,8 +10,8 @@ import UIKit
 
 class PedagogischBekwaamTableViewController: UITableViewController {
     
-    var cardsArray = [Kaart]()
-    var startbekwaamCards = [Kaart]()
+    var cardsArray = [Card]()
+    var startbekwaamCards = [Card]()
     var selectedCard: String!
     
     override func viewDidLoad() {
