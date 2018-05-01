@@ -7,14 +7,12 @@
 //
 
 import UIKit
-import FirebaseDatabase
 import Foundation
 
 class DidactischBekwaamTableViewController: UITableViewController {
 
-    private var dialoguecardRef: DatabaseReference?
-    var cardsArray = [Card]()
-    var startbekwaamCards = [Card]()
+    var cardsArray = [Kaart]()
+    var startbekwaamCards = [Kaart]()
     var tableHeaders = [String]()
     var tableValues = [[String]]()
     var selectedCard: String!
@@ -28,7 +26,7 @@ class DidactischBekwaamTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupReferences()
+        getCardsArray()
         setupStyling()
         tableView.dataSource = self
     }
@@ -44,23 +42,9 @@ class DidactischBekwaamTableViewController: UITableViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     
-    func setupReferences() {
-        dialoguecardRef = Constants.getRootRef()
-        dialoguecardRef?.keepSynced(true)
-        observeCards()
-    }
-    
-    func observeCards() {
-        dialoguecardRef?.observe(.value, with: { snapshot in
-            self.cardsArray.removeAll()
-            for item in snapshot.children {
-                if let cardSnapshot = item as? DataSnapshot {
-                    let card = Card(snapshot: cardSnapshot)
-                    self.cardsArray.append(card)
-                }
-            }
-            self.getCards()
-        })
+    func getCardsArray() {
+        cardsArray = JsonController.parseJson()
+        getCards()
     }
 
     // MARK: - Table view data source

@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var didactischBekwaamButton: UIButton!
     @IBOutlet weak var collegialeSamenwerkingButton: UIButton!
     @IBOutlet weak var pedagogischBekwaamButton: UIButton!

@@ -202,7 +202,7 @@ servicedesk-ict@hva.nl</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZ4-0S-Uve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="-1052"/>
+            <point key="canvasLocation" x="953" y="-801"/>
         </scene>
         <!--Pedagogisch Bekwaam Table View Controller-->
         <scene sceneID="Ueu-H8-ULw">
@@ -334,7 +334,7 @@ servicedesk-ict@hva.nl</string>
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qn7-lh-Xg9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="403"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="577.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultaat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENs-T6-vF6" userLabel="ResultaatLabel">
                                                 <rect key="frame" x="8" y="8" width="359" height="20.5"/>
@@ -343,19 +343,19 @@ servicedesk-ict@hva.nl</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="De leraar motiveert leerlingen om actief aan de slag te gaan." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BSB-yo-oc1" userLabel="ResultaatTextView">
-                                                <rect key="frame" x="8" y="28.5" width="359" height="49.5"/>
+                                                <rect key="frame" x="8" y="28.5" width="359" height="54.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De leraar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-Vg-oAn" userLabel="DeLeraarLabel">
-                                                <rect key="frame" x="8" y="78" width="359" height="21"/>
+                                                <rect key="frame" x="8" y="83" width="359" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-DZ-EoB" userLabel="DeLeraarTextView">
-                                                <rect key="frame" x="8" y="99" width="359" height="166.5"/>
+                                                <rect key="frame" x="8" y="104" width="359" height="188"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">- maakt doel en verwachting van de les duidelijk 
 - zorgt ervoor dat leerlingen de doelen van de les of het thema kennen
@@ -363,17 +363,17 @@ servicedesk-ict@hva.nl</string>
 - luistert aandachtig naar leerlingen 
 - biedt een keuze bij opdrachten
 - maakt gebruik van voorkennis en activeert voorkennis</string>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflectievragen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-9o-wFh" userLabel="ReflectievragenLabel">
-                                                <rect key="frame" x="8" y="265.5" width="359" height="21"/>
+                                                <rect key="frame" x="8" y="292" width="359" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.1450980392" green="0.086274509799999996" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ8-Og-Ygh" userLabel="ReflectievragenTextView">
-                                                <rect key="frame" x="8" y="286.5" width="359" height="116.5"/>
+                                                <rect key="frame" x="8" y="313" width="359" height="264.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Hoe maak je het doel en jouw verwachting van de les duidelijk?
 Wat levert een keuze bij opdrachten jou en je leerlingen op? Waar loop je eventueel tegen aan?
@@ -381,7 +381,7 @@ Voor welke keuzes kom je te staan bij het motiveren van leerlingen?
 Welke manieren ken je uit de theorie om leerlingen te motiveren om te leren? Welke manier zet je in?
 Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
 </string>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>

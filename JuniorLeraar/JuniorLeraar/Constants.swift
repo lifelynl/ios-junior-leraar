@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import FirebaseDatabase
 
 struct Constants {
     
@@ -32,17 +31,17 @@ struct Constants {
     static let yellow20 = yellow.withAlphaComponent(0.2)
     static let lightblue20 = lightblue.withAlphaComponent(0.2)
     
-    //      PRAGMA MARK: Firebase
-    static func getRootRef() -> DatabaseReference { return Database.database().reference(withPath: firebaseCardsTable) }
-    static let firebaseCardsTable = "Dialoguecard"
-    
     //      PRAGMA MARK: Strings
     static let themeD = "Didactisch Bekwaam"
     static let themeC = "Collegiale Samenwerking"
     static let themeP = "Pedagogisch Bekwaam"
+    static let infoTitle = "Info"
     static let levelS = "Startbekwaam"
     static let levelB = "Bekwaam"
     static let back = "Back"
+    static let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+    static let version = "Version: " + appVersionString
+    
     //      PRAGMA MARK: Seque Identifiers
     static let openCompetenceCard = "openCompetenceCard"
     static let openCompetenceCardPB = "openCompetenceCardPedagogischBekwaam"

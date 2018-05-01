@@ -7,18 +7,16 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class CollegialeSamenwerkingTableViewController: UITableViewController {
 
-    private var dialoguecardRef: DatabaseReference?
-    var cardsArray = [Card]()
-    var startbekwaamCards = [Card]()
+    var cardsArray = [Kaart]()
+    var startbekwaamCards = [Kaart]()
     var selectedCard: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupReferences()
+        getCardsArray()
         setupStyling()
         tableView.dataSource = self
     }
@@ -32,26 +30,11 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = Constants.yellow
         navigationController?.navigationBar.tintColor = Constants.purpleblue
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: Constants.purpleblue]
-        
     }
     
-    func setupReferences() {
-        dialoguecardRef = Constants.getRootRef()
-        dialoguecardRef?.keepSynced(true)
-        observeCards()
-    }
-    
-    func observeCards() {
-        dialoguecardRef?.observe(.value, with: { snapshot in
-            self.cardsArray.removeAll()
-            for item in snapshot.children {
-                if let cardSnapshot = item as? DataSnapshot {
-                    let card = Card(snapshot: cardSnapshot)
-                    self.cardsArray.append(card)
-                }
-            }
-            self.getCards()
-        })
+    func getCardsArray() {
+        cardsArray = JsonController.parseJson()
+        self.getCards()
     }
     
     func getCards() {

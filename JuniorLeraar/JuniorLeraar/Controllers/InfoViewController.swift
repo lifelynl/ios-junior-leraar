@@ -17,12 +17,11 @@ class InfoViewController: UIViewController {
     }
     
     func setupStyling() {
-        navigationItem.title = "Info"
+        navigationItem.title = Constants.infoTitle
         navigationController?.navigationBar.barTintColor = Constants.purpleblue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-        versionTextView.text = "Version: " + appVersionString
+        versionTextView.text = Constants.version
     }
 
 }

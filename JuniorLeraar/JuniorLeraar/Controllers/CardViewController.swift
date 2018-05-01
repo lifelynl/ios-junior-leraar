@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class CardViewController: UIViewController {
 
@@ -18,20 +17,28 @@ class CardViewController: UIViewController {
     @IBOutlet weak var bekwaamButton: UIBarButtonItem!
     @IBOutlet weak var startbekwaamButton: UIBarButtonItem!
     @IBOutlet weak var cardToolbar: UIToolbar!
-    private var dialoguecardRef: DatabaseReference?
-    var cardsArray = [Card]()
+    var cardsArray = [Kaart]()
     var selectedCard = ""
     var currentTheme: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupReferences()
-        observeCards()
+        getCardsArray()
         setupStyling()
     }
     
     func setupStyling() {
         navigationItem.title = Constants.levelS
+        if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
+            bekwaamButton.tintColor = UIColor.white
+            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+        } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
+            bekwaamButton.tintColor = Constants.purpleblue
+            startbekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
+        } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
+            bekwaamButton.tintColor = UIColor.white
+            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+        }
     }
     
     func findCurrentTheme() {
@@ -72,8 +79,8 @@ class CardViewController: UIViewController {
         for card in cardsArray {
             if (card.title == selectedCard && card.level.lowercased() == Constants.levelS.lowercased()) {
                 resultTextView.text = card.resultText
-                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
-                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
             }
         }
     }
@@ -93,29 +100,16 @@ class CardViewController: UIViewController {
         for card in cardsArray {
             if (card.title == selectedCard && card.level.lowercased() == Constants.levelB.lowercased()) {
                 resultTextView.text = card.resultText
-                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
-                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: "#", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                deLeraarTextView.text = card.teacherText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
+                reflectievragenTextView.text = card.questionText.replacingOccurrences(of: " #", with: "\n∙").replacingOccurrences(of: "$", with: "∙")
             }
         }
     
     }
     
-    func setupReferences() {
-        dialoguecardRef = Constants.getRootRef()
-        dialoguecardRef?.keepSynced(true)
-        observeCards()
-    }
-    
-    func observeCards() {
-        dialoguecardRef?.observe(.value, with: { snapshot in
-            for item in snapshot.children {
-                if let cardSnapshot = item as? DataSnapshot {
-                    let card = Card(snapshot: cardSnapshot)
-                    self.cardsArray.append(card)
-                }
-            }
-            self.setStartbekwaamCardText()
-            self.findCurrentTheme()
-        })
+    func getCardsArray() {
+        cardsArray = JsonController.parseJson()
+        self.setStartbekwaamCardText()
+        self.findCurrentTheme()
     }
 }
