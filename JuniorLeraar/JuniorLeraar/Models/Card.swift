@@ -1,5 +1,5 @@
 //
-//  Kaart.swift
+//  Card.swift
 //  JuniorLeraar
 //
 //  Created by Jasper Zwiers on 01-05-18.

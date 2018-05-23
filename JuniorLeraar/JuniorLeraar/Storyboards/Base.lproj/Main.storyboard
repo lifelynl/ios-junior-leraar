@@ -118,9 +118,9 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmN-4L-8aX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1529.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1491.5"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Version: 1.5.3" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-lo-kU0" userLabel="VersionTextView">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Version: 1.0.0" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-lo-kU0" userLabel="VersionTextView">
                                                 <rect key="frame" x="8" y="8" width="359" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -129,12 +129,10 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-1g-VaL">
-                                                <rect key="frame" x="8" y="43" width="359" height="1486.5"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-1g-VaL" userLabel="InfoTextView">
+                                                <rect key="frame" x="8" y="43" width="359" height="1448.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">Dialoogkaarten Junior Leraar
-
-De Junior Leraar app is bedoeld om de ontwikkeling van startende leraren te ondersteunen.
+                                                <mutableString key="text">De Junior Leraar app is bedoeld om de ontwikkeling van startende leraren te ondersteunen.
 
 De app bevat de Dialoogkaarten die ontwikkeld zijn binnen het project Junior Leraar van de HvA en kan gebruikt worden als reflectie-instrument en als handvat tijdens begeleidingsgesprekken tussen een startende leraar en een begeleider, of tussen een student-in-opleiding en een begeleider.
 
@@ -160,7 +158,7 @@ De app is bedoeld voor startende leraren, leraren in opleiding en hun coaches/be
 Postbus 1025
 1000 BA Amsterdam
 020- 595 1400
-servicedesk-ict@hva.nl</string>
+servicedesk-ict@hva.nl</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -197,6 +195,7 @@ servicedesk-ict@hva.nl</string>
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="infoTextview" destination="MRz-1g-VaL" id="aQH-oV-fLV"/>
                         <outlet property="versionTextView" destination="MvU-lo-kU0" id="OfV-jh-iPg"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,7 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var versionTextView: UITextView!
+    @IBOutlet weak var infoTextview: UITextView!
     
     override func viewDidLoad() {
         setupStyling()
@@ -22,6 +23,7 @@ class InfoViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         versionTextView.text = Constants.version
+        infoTextview.accessibilityTraits = UIAccessibilityTraitStaticText
     }
 
 }

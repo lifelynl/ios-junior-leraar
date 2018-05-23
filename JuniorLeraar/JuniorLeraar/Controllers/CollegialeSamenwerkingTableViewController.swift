@@ -34,7 +34,7 @@ class CollegialeSamenwerkingTableViewController: UITableViewController {
     
     func getCardsArray() {
         cardsArray = JsonController.parseJson()
-        self.getCards()
+        getCards()
     }
     
     func getCards() {

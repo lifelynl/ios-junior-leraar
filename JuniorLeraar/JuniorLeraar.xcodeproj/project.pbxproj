@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A41DF2BD208DC26400699ED9 /* JsonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF2BC208DC26400699ED9 /* JsonController.swift */; };
-		A47CDD88208DECE7005935DA /* junior-leraar.json in Resources */ = {isa = PBXBuildFile; fileRef = A47CDD87208DECE7005935DA /* junior-leraar.json */; };
+		A42F629920A9756400A6D270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD820357D39005212A3 /* Assets.xcassets */; };
+		A44D909A20B557BA0049009F /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = A44D909920B557B90049009F /* cards.json */; };
 		A483D5F32061296800E452DF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A483D5F22061296800E452DF /* InfoViewController.swift */; };
 		A48E57A7204FF1C0007822AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57A6204FF1C0007822AD /* Constants.swift */; };
 		A48E57A92050070F007822AD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57A82050070F007822AD /* CardViewController.swift */; };
@@ -18,7 +19,6 @@
 		A4E4BAD220357D39005212A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD120357D39005212A3 /* AppDelegate.swift */; };
 		A4E4BAD420357D39005212A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD320357D39005212A3 /* HomeViewController.swift */; };
 		A4E4BAD720357D39005212A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD520357D39005212A3 /* Main.storyboard */; };
-		A4E4BAD920357D39005212A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD820357D39005212A3 /* Assets.xcassets */; };
 		A4E4BADC20357D39005212A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BADA20357D39005212A3 /* LaunchScreen.storyboard */; };
 		A4E4BAEA2035A527005212A3 /* DidactischBekwaamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAE92035A527005212A3 /* DidactischBekwaamTableViewController.swift */; };
 		EA0242A3CF3C2BAE8A9C32AB /* Pods_JuniorLeraar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */; };
@@ -29,7 +29,7 @@
 		44BADD22F308713B1863B043 /* Pods_JuniorLeraar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuniorLeraar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		691B53134A140AB439C8AAAE /* Pods-JuniorLeraar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuniorLeraar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JuniorLeraar/Pods-JuniorLeraar.debug.xcconfig"; sourceTree = "<group>"; };
 		A41DF2BC208DC26400699ED9 /* JsonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonController.swift; sourceTree = "<group>"; };
-		A47CDD87208DECE7005935DA /* junior-leraar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "junior-leraar.json"; path = "../../../../../../Downloads/junior-leraar.json"; sourceTree = "<group>"; };
+		A44D909920B557B90049009F /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		A483D5F22061296800E452DF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A48E57A6204FF1C0007822AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A48E57A82050070F007822AD /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		A4E4BAD020357D39005212A3 /* JuniorLeraar */ = {
 			isa = PBXGroup;
 			children = (
-				A47CDD87208DECE7005935DA /* junior-leraar.json */,
+				A44D909920B557B90049009F /* cards.json */,
 				A4D5A5772037104B0068BD57 /* Models */,
 				A4E4BAE62035A490005212A3 /* Controllers */,
 				A4E4BAE52035A47E005212A3 /* Storyboards */,
@@ -199,9 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47CDD88208DECE7005935DA /* junior-leraar.json in Resources */,
 				A4E4BADC20357D39005212A3 /* LaunchScreen.storyboard in Resources */,
-				A4E4BAD920357D39005212A3 /* Assets.xcassets in Resources */,
+				A42F629920A9756400A6D270 /* Assets.xcassets in Resources */,
+				A44D909A20B557BA0049009F /* cards.json in Resources */,
 				A4E4BAD720357D39005212A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

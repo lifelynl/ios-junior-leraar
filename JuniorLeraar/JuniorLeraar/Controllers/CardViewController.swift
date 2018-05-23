@@ -34,14 +34,14 @@ class CardViewController: UIViewController {
     func setupStyling() {
         navigationItem.title = Constants.levelS
         if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
-            bekwaamButton.tintColor = UIColor.white
-            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = UIColor.white
         } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
-            bekwaamButton.tintColor = Constants.purpleblue
-            startbekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
+            bekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = Constants.purpleblue
         } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
-            bekwaamButton.tintColor = UIColor.white
-            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = UIColor.white
         }
     }
     
@@ -71,14 +71,14 @@ class CardViewController: UIViewController {
     func setStartbekwaamCardText() {
         navigationItem.title = Constants.levelS
         if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
-            bekwaamButton.tintColor = UIColor.white
-            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = UIColor.white
         } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
-            bekwaamButton.tintColor = Constants.purpleblue
-            startbekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
+            bekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = Constants.purpleblue
         } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
-            bekwaamButton.tintColor = UIColor.white
-            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
+            startbekwaamButton.tintColor = UIColor.white
         }
         for card in cardsArray {
             if (card.title == selectedCard && card.level.lowercased() == Constants.levelS.lowercased()) {
@@ -92,14 +92,14 @@ class CardViewController: UIViewController {
     func setBekwaamCardText() {
         navigationItem.title = Constants.levelB
         if (currentTheme?.lowercased() == Constants.themeD.lowercased()) {
-            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
-            startbekwaamButton.tintColor = UIColor.white
+            bekwaamButton.tintColor = UIColor.white
+            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
         } else if (currentTheme?.lowercased() == Constants.themeC.lowercased()) {
-            bekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
-            startbekwaamButton.tintColor = Constants.purpleblue
+            bekwaamButton.tintColor = Constants.purpleblue
+            startbekwaamButton.tintColor = Constants.purpleblue.withAlphaComponent(0.6)
         } else if (currentTheme?.lowercased() == Constants.themeP.lowercased()) {
-            bekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
-            startbekwaamButton.tintColor = UIColor.white
+            bekwaamButton.tintColor = UIColor.white
+            startbekwaamButton.tintColor = UIColor.white.withAlphaComponent(0.6)
         }
         for card in cardsArray {
             if (card.title == selectedCard && card.level.lowercased() == Constants.levelB.lowercased()) {
@@ -113,7 +113,7 @@ class CardViewController: UIViewController {
     
     func getCardsArray() {
         cardsArray = JsonController.parseJson()
-        self.setStartbekwaamCardText()
-        self.findCurrentTheme()
+        setStartbekwaamCardText()
+        findCurrentTheme()
     }
 }

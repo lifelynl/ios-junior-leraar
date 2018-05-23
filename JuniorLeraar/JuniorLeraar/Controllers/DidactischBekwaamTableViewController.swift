@@ -143,11 +143,20 @@ class DidactischBekwaamTableViewController: UITableViewController {
             backItem.title = Constants.back
             navigationItem.backBarButtonItem = backItem
         }
-    }
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return tableHeaders.count
     }
+    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let label = UILabel()
+//        label.font = UIFont.boldSystemFont(ofSize: label.font.pointSize)
+//        label.lineBreakMode = .byWordWrapping
+//        label.numberOfLines = 0
+//        label.text = "        " + tableHeaders[section]
+//        return label
+//    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return tableHeaders[section]

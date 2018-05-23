@@ -12,7 +12,7 @@ struct JsonController{
     
     static func parseJson() -> [Card] {
         var cardsArray = [Card]()
-        let path = Bundle.main.path(forResource: "junior-leraar", ofType: "json")
+        let path = Bundle.main.path(forResource: "cards", ofType: "json")
         let url = URL(fileURLWithPath: path!)
         
         do {
