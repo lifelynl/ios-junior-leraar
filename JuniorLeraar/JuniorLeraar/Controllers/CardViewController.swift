@@ -13,6 +13,9 @@ class CardViewController: UIViewController {
     @IBOutlet weak var resultTextView: UITextView!
     @IBOutlet weak var deLeraarTextView: UITextView!
     @IBOutlet weak var reflectievragenTextView: UITextView!
+    @IBOutlet weak var resultTitle: UILabel!
+    @IBOutlet weak var deLeraarTitle: UILabel!
+    @IBOutlet weak var reflectievragenTitle: UILabel!
     
     @IBOutlet weak var bekwaamButton: UIBarButtonItem!
     @IBOutlet weak var startbekwaamButton: UIBarButtonItem!
@@ -25,6 +28,10 @@ class CardViewController: UIViewController {
         super.viewDidLoad()
         getCardsArray()
         setupStyling()
+        
+        resultTitle.accessibilityLabel = "Resultaat Koptekst"
+        deLeraarTitle.accessibilityLabel = "De leraar Koptekst"
+        reflectievragenTitle.accessibilityLabel = "Reflectievragen Koptekst"
         
         resultTextView.accessibilityTraits = UIAccessibilityTraitStaticText
         deLeraarTextView.accessibilityTraits = UIAccessibilityTraitStaticText

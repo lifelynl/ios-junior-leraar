@@ -146,7 +146,7 @@ Elke bekwaamheid is op twee niveaus uitgewerkt:
 
 Per bekwaamheid bevat het scherm drie elementen:
 
-1. het beoogde resultaat voor het niveau startbekwaam is het resultaat gericht op het handelen van de leraar, voor het niveau bekwaam is het resultaat gericht op het effect van dat handelen op de leerling.
+1. Het beoogde resultaat voor het niveau startbekwaam is het resultaat gericht op het handelen van de leraar, voor het niveau bekwaam is het resultaat gericht op het effect van dat handelen op de leerling.
 
 2. Vervolgens worden indicatoren genoemd die bij kunnen dragen aan het beoogde resultaat. De indicatoren beschrijven het zichtbare handelen en het resultaat van dat handelen. Deze indicatoren zijn voorbeelden van handelen van de leraar. In de bekwaamheidsbeschrijvingen is geen onderscheid gemaakt naar onderwijstype, schoolvak of onderwijskundige visie van de school. Bij het gebruik van de kaarten kunnen starters en begeleiders indien gewenst eigen passende kleuring aan de indicatoren geven.
 
@@ -436,8 +436,11 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                         <outlet property="bekwaamButton" destination="Hq2-cb-Hme" id="ytm-53-HDd"/>
                         <outlet property="cardToolbar" destination="pBK-UR-cyQ" id="Wf0-iB-iwD"/>
                         <outlet property="deLeraarTextView" destination="fOj-DZ-EoB" id="lCj-Cw-axg"/>
+                        <outlet property="deLeraarTitle" destination="6JL-Vg-oAn" id="rGf-6U-0UZ"/>
                         <outlet property="reflectievragenTextView" destination="IZ8-Og-Ygh" id="Qp7-nt-c10"/>
+                        <outlet property="reflectievragenTitle" destination="bAf-9o-wFh" id="vdL-YF-f4k"/>
                         <outlet property="resultTextView" destination="BSB-yo-oc1" id="vfY-rt-H4T"/>
+                        <outlet property="resultTitle" destination="ENs-T6-vF6" id="EkZ-s9-IkU"/>
                         <outlet property="startbekwaamButton" destination="zRj-aM-e6V" id="x5S-Td-CxO"/>
                     </connections>
                 </viewController>
