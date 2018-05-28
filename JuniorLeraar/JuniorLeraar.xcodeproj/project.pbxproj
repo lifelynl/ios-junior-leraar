@@ -16,6 +16,7 @@
 		A48E57AB2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */; };
 		A48E57AD20512A5B007822AD /* PedagogischBekwaamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */; };
 		A4BC5EAA2098B2FE004B1CE5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BC5EA92098B2FE004B1CE5 /* Card.swift */; };
+		A4C83A4320BBF4D50060D911 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C83A4220BBF4D50060D911 /* SearchViewController.swift */; };
 		A4E4BAD220357D39005212A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD120357D39005212A3 /* AppDelegate.swift */; };
 		A4E4BAD420357D39005212A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4BAD320357D39005212A3 /* HomeViewController.swift */; };
 		A4E4BAD720357D39005212A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4BAD520357D39005212A3 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		A48E57AA2051264D007822AD /* CollegialeSamenwerkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegialeSamenwerkingTableViewController.swift; sourceTree = "<group>"; };
 		A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedagogischBekwaamTableViewController.swift; sourceTree = "<group>"; };
 		A4BC5EA92098B2FE004B1CE5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A4C83A4220BBF4D50060D911 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A4E4BACE20357D39005212A3 /* JuniorLeraar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuniorLeraar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4BAD120357D39005212A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4BAD320357D39005212A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				A48E57AC20512A5B007822AD /* PedagogischBekwaamTableViewController.swift */,
 				A483D5F22061296800E452DF /* InfoViewController.swift */,
 				A41DF2BC208DC26400699ED9 /* JsonController.swift */,
+				A4C83A4220BBF4D50060D911 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41DF2BD208DC26400699ED9 /* JsonController.swift in Sources */,
+				A4C83A4320BBF4D50060D911 /* SearchViewController.swift in Sources */,
 				A483D5F32061296800E452DF /* InfoViewController.swift in Sources */,
 				A48E57A7204FF1C0007822AD /* Constants.swift in Sources */,
 				A4BC5EAA2098B2FE004B1CE5 /* Card.swift in Sources */,
