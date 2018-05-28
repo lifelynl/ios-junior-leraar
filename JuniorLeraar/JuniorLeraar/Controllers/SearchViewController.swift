@@ -27,7 +27,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchController.searchBar.delegate = self
         
         setupStyling()
-        setupReferences()
+        observeCards()
     }
     
     /*
@@ -46,6 +46,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
      Database setup
      */
     func observeCards() {
+        cardsArray = JsonController.parseJson()
         getCards()
     }
     
@@ -97,10 +98,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
      Add search results from array to cell in tableView
      */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let searchCell = Bundle.main.loadNibNamed("SearchCell", owner: self, options: nil)?.first as? SearchCell
-            else { return UITableViewCell() }
+        let searchCell = UITableViewCell()
         let card = filteredCardsArray[indexPath.row]
-        searchCell.setSearchCell(card: card)
+        searchCell.textLabel?.text = card.competence
         return searchCell
     }
     

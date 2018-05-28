@@ -54,7 +54,7 @@
                                 <rect key="frame" x="343" y="74" width="22" height="22"/>
                                 <color key="tintColor" red="0.14509803921568626" green="0.086274509803921567" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <segue destination="5Sa-nj-xnE" kind="show" id="tfl-Oz-5eh"/>
+                                    <segue destination="Fco-OE-shF" kind="show" id="J6s-sg-OjE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuO-zN-Ltz">
@@ -115,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9P7-44-yGL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmN-4L-8aX">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1491.5"/>
@@ -132,7 +132,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-1g-VaL" userLabel="InfoTextView">
                                                 <rect key="frame" x="8" y="43" width="359" height="1448.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <mutableString key="text">De Junior Leraar app is bedoeld om de ontwikkeling van startende leraren te ondersteunen.
+                                                <string key="text">De Junior Leraar app is bedoeld om de ontwikkeling van startende leraren te ondersteunen.
 
 De app bevat de Dialoogkaarten die ontwikkeld zijn binnen het project Junior Leraar van de HvA en kan gebruikt worden als reflectie-instrument en als handvat tijdens begeleidingsgesprekken tussen een startende leraar en een begeleider, of tussen een student-in-opleiding en een begeleider.
 
@@ -158,7 +158,7 @@ De app is bedoeld voor startende leraren, leraren in opleiding en hun coaches/be
 Postbus 1025
 1000 BA Amsterdam
 020- 595 1400
-servicedesk-ict@hva.nl</mutableString>
+servicedesk-ict@hva.nl</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -468,6 +468,25 @@ Welke andere bronnen kun je gebruiken bij het motiveren van leerlingen?
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOt-me-C4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136" y="89.055472263868069"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="SY8-8Z-9uM">
+            <objects>
+                <viewController storyboardIdentifier="searchViewController" id="Fco-OE-shF" customClass="SearchViewController" customModule="JuniorLeraar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6YH-YQ-XiO" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.60182611200000002" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="h6A-3h-8pz"/>
+                        <connections>
+                            <action selector="userTappedBackground:" destination="Fco-OE-shF" eventType="touchDown" id="yS7-ab-qwZ"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="28K-Wg-gha" userLabel="Search"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rs-5P-Uw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="-903"/>
         </scene>
     </scenes>
     <resources>
